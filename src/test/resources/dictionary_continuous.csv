@@ -1,0 +1,17 @@
+fraud:portfolio|encoding=string|type=categorical|description=The portfolio field|tombstone=NA
+fraud:balance|encoding=long|type=continuous|description=The balance field|tombstone=NA
+fraud:balance_gradient_8_mth|source=fraud:balance|window=3 months|description=balance gradient 3 months|expression=gradient
+fraud:balance_gradient_2_mth|source=fraud:balance|window=2 months|description=balance gradient 2 months|expression=gradient
+fraud:balance_gradient_1_mth|source=fraud:balance|window=1 months|description=balance gradient 1 months|expression=gradient
+fraud:balance_mean_8_mth|source=fraud:balance|window=3 months|description=balance mean 3 months|expression=mean
+fraud:balance_mean_2_mth|source=fraud:balance|window=2 months|description=balance mean 2 months|expression=mean
+fraud:balance_mean_1_mth|source=fraud:balance|window=1 months|description=balance mean 1 months|expression=mean
+fraud:balance_sd_8_mth|source=fraud:balance|window=3 months|description=balance standard deviation 3 months|expression=std_dev
+fraud:balance_sd_2_mth|source=fraud:balance|window=2 months|description=balance standard deviation 2 months|expression=std_dev
+fraud:balance_sd_1_mth|source=fraud:balance|window=1 months|description=balance standard deviation 1 months|expression=std_dev
+fraud:balance_min_8_mth|source=fraud:balance|window=3 months|description=balance min 3 months|expression=min
+fraud:balance_min_2_mth|source=fraud:balance|window=2 months|description=balance min 2 months|expression=min
+fraud:balance_min_1_mth|source=fraud:balance|window=1 months|description=balance min 1 months|expression=min
+fraud:balance_max_8_mth|source=fraud:balance|window=3 months|description=balance max 3 months|expression=max
+fraud:balance_max_2_mth|source=fraud:balance|window=2 months|description=balance max 2 months|expression=max
+fraud:balance_max_1_mth|source=fraud:balance|window=1 months|description=balance max 1 months|expression=max

@@ -1,0 +1,18 @@
+fraud:balance|encoding=string|type=categorical|description=The balance field|tombstone=NA
+fraud:age|encoding=string|type=categorical|description=The idrvalcoholdrugsconsumed field|tombstone=NA
+fraud:age_numflips_8_mth|source=fraud:age|window=8 months|description=idrv_gender numflips 8 months|expression=num_flips
+fraud:age_numflips_2_mth|source=fraud:age|window=2 months|description=idrv_gender numflips 2 months|expression=num_flips
+fraud:age_numflips_1_mth|source=fraud:age|window=1 months|description=idrv_gender numflips 1 months|expression=num_flips
+fraud:age_count_8_mth|source=fraud:age|window=8 months|description=idrv_gender count 8 months|expression=count
+fraud:age_count_2_mth|source=fraud:age|window=2 months|description=idrv_gender count 2 months|expression=count
+fraud:age_count_1_mth|source=fraud:age|window=1 months|description=idrv_gender count 1 months|expression=count
+fraud:balance_numflips_8_mth|source=fraud:balance|window=8 months|description=idrv_gender numflips 8 months|expression=num_flips
+fraud:balance_numflips_2_mth|source=fraud:balance|window=2 months|description=idrv_gender numflips 2 months|expression=num_flips
+fraud:balance_numflips_1_mth|source=fraud:balance|window=1 months|description=idrv_gender numflips 1 months|expression=num_flips
+fraud:balance_count_8_mth|source=fraud:balance|window=8 months|description=idrv_gender count 8 months|expression=count
+fraud:balance_count_2_mth|source=fraud:balance|window=2 months|description=idrv_gender count 2 months|expression=count
+fraud:balance_count_1_mth|source=fraud:balance|window=1 months|description=idrv_gender count 1 months|expression=count
+fraud:account_balance|encoding=long|type=continuous|description=The balance field|tombstone=NA
+fraud:account_balance_gradient_24_mth|source=fraud:account_balance|window=24 months|description=balance gradient 24 months|expression=gradient
+fraud:account_balance_gradient_18_mth|source=fraud:account_balance|window=18 months|description=balance gradient 18 months|expression=gradient
+fraud:account_balance_gradient_12_mth|source=fraud:account_balance|window=12 months|description=balance gradient 12 months|expression=gradient

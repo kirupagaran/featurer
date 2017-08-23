@@ -1,0 +1,1111 @@
+claims:activity_subject|encoding=string|type=categorical|description=The ACTIVITY_SUBJECT field|tombstone=NA
+claims:activity_importance|encoding=long|type=categorical|description=The ACTIVITY_IMPORTANCE field|tombstone=NA
+claims:activity_priority|encoding=long|type=categorical|description=The ACTIVITY_PRIORITY field|tombstone=NA
+claims:activity_status|encoding=long|type=categorical|description=The ACTIVITY_STATUS field|tombstone=NA
+claims:activity_type|encoding=long|type=categorical|description=The ACTIVITY_TYPE field|tombstone=NA
+claims:activity_subject_numflips_1_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 1 months|window=1 months|expression=num_flips
+claims:activity_subject_numflips_2_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 2 months|window=2 months|expression=num_flips
+claims:activity_subject_numflips_3_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 3 months|window=3 months|expression=num_flips
+claims:activity_subject_numflips_6_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 6 months|window=6 months|expression=num_flips
+claims:activity_subject_numflips_9_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 9 months|window=9 months|expression=num_flips
+claims:activity_subject_numflips_12_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 12 months|window=12 months|expression=num_flips
+claims:activity_subject_numflips_18_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 18 months|window=18 months|expression=num_flips
+claims:activity_subject_numflips_24_mth|source=claims:activity_subject|description=The number of times claims:activity_subject changed in the past 24 months|window=24 months|expression=num_flips
+claims:activity_subject_count_1_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 1 months|window=1 months|expression=count
+claims:activity_subject_count_unique_1_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 1 months|window=1 months|expression=count_unique
+claims:activity_subject_count_2_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 2 months|window=2 months|expression=count
+claims:activity_subject_count_unique_2_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 2 months|window=2 months|expression=count_unique
+claims:activity_subject_count_3_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 3 months|window=3 months|expression=count
+claims:activity_subject_count_unique_3_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 3 months|window=3 months|expression=count_unique
+claims:activity_subject_count_6_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 6 months|window=6 months|expression=count
+claims:activity_subject_count_unique_6_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 6 months|window=6 months|expression=count_unique
+claims:activity_subject_count_9_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 9 months|window=9 months|expression=count
+claims:activity_subject_count_unique_9_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 9 months|window=9 months|expression=count_unique
+claims:activity_subject_count_12_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 12 months|window=12 months|expression=count
+claims:activity_subject_count_unique_12_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 12 months|window=12 months|expression=count_unique
+claims:activity_subject_count_18_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 18 months|window=18 months|expression=count
+claims:activity_subject_count_unique_18_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 18 months|window=18 months|expression=count_unique
+claims:activity_subject_count_24_mth|source=claims:activity_subject|description=The count of the number of values for claims:activity_subject in the past 24 months|window=24 months|expression=count
+claims:activity_subject_count_unique_24_mth|source=claims:activity_subject|description=The count of the number of unique values for claims:activity_subject in the past 24 months|window=24 months|expression=count_unique
+claims:detailed_body_part_type|encoding=string|type=categorical|description=The DETAILED_BODY_PART_TYPE field|tombstone=NA
+claims:body_part_type|encoding=string|type=categorical|description=The BODY_PART_TYPE field|tombstone=NA
+claims:injury_type|encoding=string|type=categorical|description=The INJURY_TYPE field|tombstone=NA
+claims:injury_sub_type|encoding=string|type=categorical|description=The INJURY_SUB_TYPE field|tombstone=NA
+claims:wc_compensable|encoding=string|type=categorical|description=The WC_COMPENSABLE field|tombstone=NA
+claims:case_service_type|encoding=string|type=categorical|description=The CASE_SERVICE_TYPE field|tombstone=NA
+claims:case_outcome|encoding=string|type=categorical|description=The CASE_OUTCOME field|tombstone=NA
+claims:rtw_program_status|encoding=string|type=categorical|description=The RTW_PROGRAM_STATUS field|tombstone=NA
+claims:case_employer_handling|encoding=string|type=categorical|description=The CASE_EMPLOYER_HANDLING field|tombstone=NA
+claims:case_rtw_delegation_flag|encoding=string|type=categorical|description=The CASE_RTW_DELEGATION_FLAG field|tombstone=NA
+claims:case_referral_source|encoding=string|type=categorical|description=The CASE_REFERRAL_SOURCE field|tombstone=NA
+claims:caseline_rehab_service_type_request|encoding=string|type=categorical|description=The CASELINE_REHAB_SERVICE_TYPE_REQUEST field|tombstone=NA
+claims:document_type|encoding=string|type=categorical|description=The DOCUMENT_TYPE field|tombstone=NA
+claims:document_type_numflips_1_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 1 months|window=1 months|expression=num_flips
+claims:document_type_numflips_2_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 2 months|window=2 months|expression=num_flips
+claims:document_type_numflips_3_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 3 months|window=3 months|expression=num_flips
+claims:document_type_numflips_6_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 6 months|window=6 months|expression=num_flips
+claims:document_type_numflips_9_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 9 months|window=9 months|expression=num_flips
+claims:document_type_numflips_12_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 12 months|window=12 months|expression=num_flips
+claims:document_type_numflips_18_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 18 months|window=18 months|expression=num_flips
+claims:document_type_numflips_24_mth|source=claims:document_type|description=The number of times claims:document_type changed in the past 24 months|window=24 months|expression=num_flips
+claims:document_type_last_10|source=claims:document_type|description=The last 10 values|window=100 months|expression=latestN,10
+claims:document_type_count_1_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 1 months|window=1 months|expression=count
+claims:document_type_count_unique_1_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 1 months|window=1 months|expression=count_unique
+claims:document_type_count_2_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 2 months|window=2 months|expression=count
+claims:document_type_count_unique_2_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 2 months|window=2 months|expression=count_unique
+claims:document_type_count_3_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 3 months|window=3 months|expression=count
+claims:document_type_count_unique_3_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 3 months|window=3 months|expression=count_unique
+claims:document_type_count_6_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 6 months|window=6 months|expression=count
+claims:document_type_count_unique_6_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 6 months|window=6 months|expression=count_unique
+claims:document_type_count_9_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 9 months|window=9 months|expression=count
+claims:document_type_count_unique_9_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 9 months|window=9 months|expression=count_unique
+claims:document_type_count_12_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 12 months|window=12 months|expression=count
+claims:document_type_count_unique_12_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 12 months|window=12 months|expression=count_unique
+claims:document_type_count_18_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 18 months|window=18 months|expression=count
+claims:document_type_count_unique_18_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 18 months|window=18 months|expression=count_unique
+claims:document_type_count_24_mth|source=claims:document_type|description=The count of the number of values for claims:document_type in the past 24 months|window=24 months|expression=count
+claims:document_type_count_unique_24_mth|source=claims:document_type|description=The count of the number of unique values for claims:document_type in the past 24 months|window=24 months|expression=count_unique
+claims:sc_resumedworkdate|encoding=string|type=categorical|description=The SC_RESUMEDWORKDATE field|tombstone=NA
+claims:sc_weeklyrate|encoding=string|type=categorical|description=The SC_WEEKLYRATE field|tombstone=NA
+claims:work_status|encoding=string|type=categorical|description=The WORK_STATUS field|tombstone=NA
+claims:sc_hoursworkedperweek|encoding=string|type=categorical|description=The SC_HOURSWORKEDPERWEEK field|tombstone=NA
+claims:sc_estimatedrtwdate|encoding=string|type=categorical|description=The SC_ESTIMATEDRTWDATE field|tombstone=NA
+claims:worker_status|encoding=string|type=categorical|description=The WORKER_STATUS field|tombstone=NA
+claims:employment_status|encoding=string|type=categorical|description=The EMPLOYMENT_STATUS field|tombstone=NA
+claims:sc_partialincaphoursperweek|encoding=string|type=categorical|description=The SC_PARTIALINCAPHOURSPERWEEK field|tombstone=NA
+claims:sc_partialincaprate|encoding=string|type=categorical|description=The SC_PARTIALINCAPRATE field|tombstone=NA
+claims:evaluation_partialincaprate|encoding=string|type=categorical|description=The EVALUATION_PARTIALINCAPRATE field|tombstone=NA
+claims:evaluation_recoveryamount|encoding=string|type=categorical|description=The EVALUATION_RECOVERYAMOUNT field|tombstone=NA
+claims:evaluation_recoverypercent|encoding=string|type=categorical|description=The EVALUATION_RECOVERYPERCENT field|tombstone=NA
+claims:evaluation_totalunpaidweeks|encoding=string|type=categorical|description=The EVALUATION_TOTALUNPAIDWEEKS field|tombstone=NA
+claims:evaluationline_guidelineestimate|encoding=double|type=categorical|description=The EVALUATIONLINE_GUIDELINEESTIMATE field|tombstone=NA
+claims:evaluationline_estimate|encoding=double|type=categorical|description=The EVALUATIONLINE_ESTIMATE field|tombstone=NA
+claims:evaluation_cost_type|encoding=string|type=categorical|description=The EVALUATION_COST_TYPE field|tombstone=NA
+claims:evaluation_cost_category|encoding=string|type=categorical|description=The EVALUATION_COST_CATEGORY field|tombstone=NA
+claims:evaluation_cost_type_count_1_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 1 months|window=1 months|expression=count
+claims:evaluation_cost_type_count_unique_1_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 1 months|window=1 months|expression=count_unique
+claims:evaluation_cost_type_count_2_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 2 months|window=2 months|expression=count
+claims:evaluation_cost_type_count_unique_2_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 2 months|window=2 months|expression=count_unique
+claims:evaluation_cost_type_count_3_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 3 months|window=3 months|expression=count
+claims:evaluation_cost_type_count_unique_3_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 3 months|window=3 months|expression=count_unique
+claims:evaluation_cost_type_count_6_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 6 months|window=6 months|expression=count
+claims:evaluation_cost_type_count_unique_6_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 6 months|window=6 months|expression=count_unique
+claims:evaluation_cost_type_count_9_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 9 months|window=9 months|expression=count
+claims:evaluation_cost_type_count_unique_9_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 9 months|window=9 months|expression=count_unique
+claims:evaluation_cost_type_count_12_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 12 months|window=12 months|expression=count
+claims:evaluation_cost_type_count_unique_12_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 12 months|window=12 months|expression=count_unique
+claims:evaluation_cost_type_count_18_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 18 months|window=18 months|expression=count
+claims:evaluation_cost_type_count_unique_18_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 18 months|window=18 months|expression=count_unique
+claims:evaluation_cost_type_count_24_mth|source=claims:evaluation_cost_type|description=The count of the number of values for claims:evaluation_cost_type in the past 24 months|window=24 months|expression=count
+claims:evaluation_cost_type_count_unique_24_mth|source=claims:evaluation_cost_type|description=The count of the number of unique values for claims:evaluation_cost_type in the past 24 months|window=24 months|expression=count_unique
+claims:evaluationline_estimate_gradient_1_mth|source=claims:evaluationline_estimate|description=The gradient over the past 1 months|window=1 months|expression=gradient
+claims:evaluationline_estimate_sum_1_mth|source=claims:evaluationline_estimate|description=The sum over the past 1 months|window=1 months|expression=sum
+claims:evaluationline_estimate_max_1_mth|source=claims:evaluationline_estimate|description=The maximum over the past 1 months|window=1 months|expression=max
+claims:evaluationline_estimate_min_1_mth|source=claims:evaluationline_estimate|description=The minimum over the past 1 months|window=1 months|expression=min
+claims:evaluationline_estimate_stdev_1_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 1 months|window=1 months|expression=std_dev
+claims:evaluationline_estimate_mean_1_mth|source=claims:evaluationline_estimate|description=The mean over the past 1 months|window=1 months|expression=mean
+claims:evaluationline_estimate_gradient_2_mth|source=claims:evaluationline_estimate|description=The gradient over the past 2 months|window=2 months|expression=gradient
+claims:evaluationline_estimate_sum_2_mth|source=claims:evaluationline_estimate|description=The sum over the past 2 months|window=2 months|expression=sum
+claims:evaluationline_estimate_max_2_mth|source=claims:evaluationline_estimate|description=The maximum over the past 2 months|window=2 months|expression=max
+claims:evaluationline_estimate_min_2_mth|source=claims:evaluationline_estimate|description=The minimum over the past 2 months|window=2 months|expression=min
+claims:evaluationline_estimate_stdev_2_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 2 months|window=2 months|expression=std_dev
+claims:evaluationline_estimate_mean_2_mth|source=claims:evaluationline_estimate|description=The mean over the past 2 months|window=2 months|expression=mean
+claims:evaluationline_estimate_gradient_3_mth|source=claims:evaluationline_estimate|description=The gradient over the past 3 months|window=3 months|expression=gradient
+claims:evaluationline_estimate_sum_3_mth|source=claims:evaluationline_estimate|description=The sum over the past 3 months|window=3 months|expression=sum
+claims:evaluationline_estimate_max_3_mth|source=claims:evaluationline_estimate|description=The maximum over the past 3 months|window=3 months|expression=max
+claims:evaluationline_estimate_min_3_mth|source=claims:evaluationline_estimate|description=The minimum over the past 3 months|window=3 months|expression=min
+claims:evaluationline_estimate_stdev_3_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 3 months|window=3 months|expression=std_dev
+claims:evaluationline_estimate_mean_3_mth|source=claims:evaluationline_estimate|description=The mean over the past 3 months|window=3 months|expression=mean
+claims:evaluationline_estimate_gradient_6_mth|source=claims:evaluationline_estimate|description=The gradient over the past 6 months|window=6 months|expression=gradient
+claims:evaluationline_estimate_sum_6_mth|source=claims:evaluationline_estimate|description=The sum over the past 6 months|window=6 months|expression=sum
+claims:evaluationline_estimate_max_6_mth|source=claims:evaluationline_estimate|description=The maximum over the past 6 months|window=6 months|expression=max
+claims:evaluationline_estimate_min_6_mth|source=claims:evaluationline_estimate|description=The minimum over the past 6 months|window=6 months|expression=min
+claims:evaluationline_estimate_stdev_6_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 6 months|window=6 months|expression=std_dev
+claims:evaluationline_estimate_mean_6_mth|source=claims:evaluationline_estimate|description=The mean over the past 6 months|window=6 months|expression=mean
+claims:evaluationline_estimate_gradient_9_mth|source=claims:evaluationline_estimate|description=The gradient over the past 9 months|window=9 months|expression=gradient
+claims:evaluationline_estimate_sum_9_mth|source=claims:evaluationline_estimate|description=The sum over the past 9 months|window=9 months|expression=sum
+claims:evaluationline_estimate_max_9_mth|source=claims:evaluationline_estimate|description=The maximum over the past 9 months|window=9 months|expression=max
+claims:evaluationline_estimate_min_9_mth|source=claims:evaluationline_estimate|description=The minimum over the past 9 months|window=9 months|expression=min
+claims:evaluationline_estimate_stdev_9_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 9 months|window=9 months|expression=std_dev
+claims:evaluationline_estimate_mean_9_mth|source=claims:evaluationline_estimate|description=The mean over the past 9 months|window=9 months|expression=mean
+claims:evaluationline_estimate_gradient_12_mth|source=claims:evaluationline_estimate|description=The gradient over the past 12 months|window=12 months|expression=gradient
+claims:evaluationline_estimate_sum_12_mth|source=claims:evaluationline_estimate|description=The sum over the past 12 months|window=12 months|expression=sum
+claims:evaluationline_estimate_max_12_mth|source=claims:evaluationline_estimate|description=The maximum over the past 12 months|window=12 months|expression=max
+claims:evaluationline_estimate_min_12_mth|source=claims:evaluationline_estimate|description=The minimum over the past 12 months|window=12 months|expression=min
+claims:evaluationline_estimate_stdev_12_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 12 months|window=12 months|expression=std_dev
+claims:evaluationline_estimate_mean_12_mth|source=claims:evaluationline_estimate|description=The mean over the past 12 months|window=12 months|expression=mean
+claims:evaluationline_estimate_gradient_18_mth|source=claims:evaluationline_estimate|description=The gradient over the past 18 months|window=18 months|expression=gradient
+claims:evaluationline_estimate_sum_18_mth|source=claims:evaluationline_estimate|description=The sum over the past 18 months|window=18 months|expression=sum
+claims:evaluationline_estimate_max_18_mth|source=claims:evaluationline_estimate|description=The maximum over the past 18 months|window=18 months|expression=max
+claims:evaluationline_estimate_min_18_mth|source=claims:evaluationline_estimate|description=The minimum over the past 18 months|window=18 months|expression=min
+claims:evaluationline_estimate_stdev_18_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 18 months|window=18 months|expression=std_dev
+claims:evaluationline_estimate_mean_18_mth|source=claims:evaluationline_estimate|description=The mean over the past 18 months|window=18 months|expression=mean
+claims:evaluationline_estimate_gradient_24_mth|source=claims:evaluationline_estimate|description=The gradient over the past 24 months|window=24 months|expression=gradient
+claims:evaluationline_estimate_sum_24_mth|source=claims:evaluationline_estimate|description=The sum over the past 24 months|window=24 months|expression=sum
+claims:evaluationline_estimate_max_24_mth|source=claims:evaluationline_estimate|description=The maximum over the past 24 months|window=24 months|expression=max
+claims:evaluationline_estimate_min_24_mth|source=claims:evaluationline_estimate|description=The minimum over the past 24 months|window=24 months|expression=min
+claims:evaluationline_estimate_stdev_24_mth|source=claims:evaluationline_estimate|description=The std deviation over the past 24 months|window=24 months|expression=std_dev
+claims:evaluationline_estimate_mean_24_mth|source=claims:evaluationline_estimate|description=The mean over the past 24 months|window=24 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_1_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 1 months|window=1 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_1_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 1 months|window=1 months|expression=sum
+claims:evaluationline_guidelineestimate_max_1_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 1 months|window=1 months|expression=max
+claims:evaluationline_guidelineestimate_min_1_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 1 months|window=1 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_1_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 1 months|window=1 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_1_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 1 months|window=1 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_2_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 2 months|window=2 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_2_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 2 months|window=2 months|expression=sum
+claims:evaluationline_guidelineestimate_max_2_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 2 months|window=2 months|expression=max
+claims:evaluationline_guidelineestimate_min_2_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 2 months|window=2 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_2_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 2 months|window=2 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_2_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 2 months|window=2 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_3_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 3 months|window=3 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_3_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 3 months|window=3 months|expression=sum
+claims:evaluationline_guidelineestimate_max_3_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 3 months|window=3 months|expression=max
+claims:evaluationline_guidelineestimate_min_3_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 3 months|window=3 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_3_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 3 months|window=3 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_3_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 3 months|window=3 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_6_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 6 months|window=6 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_6_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 6 months|window=6 months|expression=sum
+claims:evaluationline_guidelineestimate_max_6_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 6 months|window=6 months|expression=max
+claims:evaluationline_guidelineestimate_min_6_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 6 months|window=6 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_6_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 6 months|window=6 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_6_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 6 months|window=6 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_9_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 9 months|window=9 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_9_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 9 months|window=9 months|expression=sum
+claims:evaluationline_guidelineestimate_max_9_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 9 months|window=9 months|expression=max
+claims:evaluationline_guidelineestimate_min_9_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 9 months|window=9 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_9_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 9 months|window=9 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_9_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 9 months|window=9 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_12_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 12 months|window=12 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_12_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 12 months|window=12 months|expression=sum
+claims:evaluationline_guidelineestimate_max_12_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 12 months|window=12 months|expression=max
+claims:evaluationline_guidelineestimate_min_12_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 12 months|window=12 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_12_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 12 months|window=12 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_12_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 12 months|window=12 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_18_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 18 months|window=18 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_18_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 18 months|window=18 months|expression=sum
+claims:evaluationline_guidelineestimate_max_18_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 18 months|window=18 months|expression=max
+claims:evaluationline_guidelineestimate_min_18_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 18 months|window=18 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_18_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 18 months|window=18 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_18_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 18 months|window=18 months|expression=mean
+claims:evaluationline_guidelineestimate_gradient_24_mth|source=claims:evaluationline_guidelineestimate|description=The gradient over the past 24 months|window=24 months|expression=gradient
+claims:evaluationline_guidelineestimate_sum_24_mth|source=claims:evaluationline_guidelineestimate|description=The sum over the past 24 months|window=24 months|expression=sum
+claims:evaluationline_guidelineestimate_max_24_mth|source=claims:evaluationline_guidelineestimate|description=The maximum over the past 24 months|window=24 months|expression=max
+claims:evaluationline_guidelineestimate_min_24_mth|source=claims:evaluationline_guidelineestimate|description=The minimum over the past 24 months|window=24 months|expression=min
+claims:evaluationline_guidelineestimate_stdev_24_mth|source=claims:evaluationline_guidelineestimate|description=The std deviation over the past 24 months|window=24 months|expression=std_dev
+claims:evaluationline_guidelineestimate_mean_24_mth|source=claims:evaluationline_guidelineestimate|description=The mean over the past 24 months|window=24 months|expression=mean
+claims:transaction_filtered_amount|encoding=double|type=categorical|description=The TRANSACTION_FILTERED_AMOUNT field|tombstone=NA
+claims:transaction_filtered_type|encoding=string|type=categorical|description=The TRANSACTION_FILTERED_TYPE field|tombstone=NA
+claims:transaction_filtered_subtype|encoding=long|type=categorical|description=The TRANSACTION_FILTERED_SUBTYPE field|tombstone=NA
+claims:transaction_filtered_type_numflips_1_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 1 months|window=1 months|expression=num_flips
+claims:transaction_filtered_type_numflips_2_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 2 months|window=2 months|expression=num_flips
+claims:transaction_filtered_type_numflips_3_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 3 months|window=3 months|expression=num_flips
+claims:transaction_filtered_type_numflips_6_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 6 months|window=6 months|expression=num_flips
+claims:transaction_filtered_type_numflips_9_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 9 months|window=9 months|expression=num_flips
+claims:transaction_filtered_type_numflips_12_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 12 months|window=12 months|expression=num_flips
+claims:transaction_filtered_type_numflips_18_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 18 months|window=18 months|expression=num_flips
+claims:transaction_filtered_type_numflips_24_mth|source=claims:transaction_filtered_type|description=The number of times claims:transaction_filtered_type changed in the past 24 months|window=24 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_1_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 1 months|window=1 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_2_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 2 months|window=2 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_3_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 3 months|window=3 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_6_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 6 months|window=6 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_9_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 9 months|window=9 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_12_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 12 months|window=12 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_18_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 18 months|window=18 months|expression=num_flips
+claims:transaction_filtered_subtype_numflips_24_mth|source=claims:transaction_filtered_subtype|description=The number of times claims:transaction_filtered_subtype changed in the past 24 months|window=24 months|expression=num_flips
+claims:transaction_filtered_type_last_10|source=claims:transaction_filtered_type|description=The last 10 values|window=100 months|expression=latestN,10
+claims:transaction_filtered_subtype_last_10|source=claims:transaction_filtered_subtype|description=The last 10 values|window=100 months|expression=latestN,10
+claims:transaction_filtered_type_count_1_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 1 months|window=1 months|expression=count
+claims:transaction_filtered_type_count_unique_1_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 1 months|window=1 months|expression=count_unique
+claims:transaction_filtered_type_count_2_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 2 months|window=2 months|expression=count
+claims:transaction_filtered_type_count_unique_2_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 2 months|window=2 months|expression=count_unique
+claims:transaction_filtered_type_count_3_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 3 months|window=3 months|expression=count
+claims:transaction_filtered_type_count_unique_3_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 3 months|window=3 months|expression=count_unique
+claims:transaction_filtered_type_count_6_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 6 months|window=6 months|expression=count
+claims:transaction_filtered_type_count_unique_6_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 6 months|window=6 months|expression=count_unique
+claims:transaction_filtered_type_count_9_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 9 months|window=9 months|expression=count
+claims:transaction_filtered_type_count_unique_9_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 9 months|window=9 months|expression=count_unique
+claims:transaction_filtered_type_count_12_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 12 months|window=12 months|expression=count
+claims:transaction_filtered_type_count_unique_12_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 12 months|window=12 months|expression=count_unique
+claims:transaction_filtered_type_count_18_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 18 months|window=18 months|expression=count
+claims:transaction_filtered_type_count_unique_18_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 18 months|window=18 months|expression=count_unique
+claims:transaction_filtered_type_count_24_mth|source=claims:transaction_filtered_type|description=The count of the number of values for claims:transaction_filtered_type in the past 24 months|window=24 months|expression=count
+claims:transaction_filtered_type_count_unique_24_mth|source=claims:transaction_filtered_type|description=The count of the number of unique values for claims:transaction_filtered_type in the past 24 months|window=24 months|expression=count_unique
+claims:transaction_filtered_amount_gradient_1_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 1 months|window=1 months|expression=gradient
+claims:transaction_filtered_amount_sum_1_mth|source=claims:transaction_filtered_amount|description=The sum over the past 1 months|window=1 months|expression=sum
+claims:transaction_filtered_amount_max_1_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 1 months|window=1 months|expression=max
+claims:transaction_filtered_amount_min_1_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 1 months|window=1 months|expression=min
+claims:transaction_filtered_amount_stdev_1_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 1 months|window=1 months|expression=std_dev
+claims:transaction_filtered_amount_mean_1_mth|source=claims:transaction_filtered_amount|description=The mean over the past 1 months|window=1 months|expression=mean
+claims:transaction_filtered_amount_gradient_2_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 2 months|window=2 months|expression=gradient
+claims:transaction_filtered_amount_sum_2_mth|source=claims:transaction_filtered_amount|description=The sum over the past 2 months|window=2 months|expression=sum
+claims:transaction_filtered_amount_max_2_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 2 months|window=2 months|expression=max
+claims:transaction_filtered_amount_min_2_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 2 months|window=2 months|expression=min
+claims:transaction_filtered_amount_stdev_2_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 2 months|window=2 months|expression=std_dev
+claims:transaction_filtered_amount_mean_2_mth|source=claims:transaction_filtered_amount|description=The mean over the past 2 months|window=2 months|expression=mean
+claims:transaction_filtered_amount_gradient_3_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 3 months|window=3 months|expression=gradient
+claims:transaction_filtered_amount_sum_3_mth|source=claims:transaction_filtered_amount|description=The sum over the past 3 months|window=3 months|expression=sum
+claims:transaction_filtered_amount_max_3_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 3 months|window=3 months|expression=max
+claims:transaction_filtered_amount_min_3_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 3 months|window=3 months|expression=min
+claims:transaction_filtered_amount_stdev_3_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 3 months|window=3 months|expression=std_dev
+claims:transaction_filtered_amount_mean_3_mth|source=claims:transaction_filtered_amount|description=The mean over the past 3 months|window=3 months|expression=mean
+claims:transaction_filtered_amount_gradient_6_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 6 months|window=6 months|expression=gradient
+claims:transaction_filtered_amount_sum_6_mth|source=claims:transaction_filtered_amount|description=The sum over the past 6 months|window=6 months|expression=sum
+claims:transaction_filtered_amount_max_6_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 6 months|window=6 months|expression=max
+claims:transaction_filtered_amount_min_6_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 6 months|window=6 months|expression=min
+claims:transaction_filtered_amount_stdev_6_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 6 months|window=6 months|expression=std_dev
+claims:transaction_filtered_amount_mean_6_mth|source=claims:transaction_filtered_amount|description=The mean over the past 6 months|window=6 months|expression=mean
+claims:transaction_filtered_amount_gradient_9_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 9 months|window=9 months|expression=gradient
+claims:transaction_filtered_amount_sum_9_mth|source=claims:transaction_filtered_amount|description=The sum over the past 9 months|window=9 months|expression=sum
+claims:transaction_filtered_amount_max_9_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 9 months|window=9 months|expression=max
+claims:transaction_filtered_amount_min_9_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 9 months|window=9 months|expression=min
+claims:transaction_filtered_amount_stdev_9_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 9 months|window=9 months|expression=std_dev
+claims:transaction_filtered_amount_mean_9_mth|source=claims:transaction_filtered_amount|description=The mean over the past 9 months|window=9 months|expression=mean
+claims:transaction_filtered_amount_gradient_12_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 12 months|window=12 months|expression=gradient
+claims:transaction_filtered_amount_sum_12_mth|source=claims:transaction_filtered_amount|description=The sum over the past 12 months|window=12 months|expression=sum
+claims:transaction_filtered_amount_max_12_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 12 months|window=12 months|expression=max
+claims:transaction_filtered_amount_min_12_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 12 months|window=12 months|expression=min
+claims:transaction_filtered_amount_stdev_12_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 12 months|window=12 months|expression=std_dev
+claims:transaction_filtered_amount_mean_12_mth|source=claims:transaction_filtered_amount|description=The mean over the past 12 months|window=12 months|expression=mean
+claims:transaction_filtered_amount_gradient_18_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 18 months|window=18 months|expression=gradient
+claims:transaction_filtered_amount_sum_18_mth|source=claims:transaction_filtered_amount|description=The sum over the past 18 months|window=18 months|expression=sum
+claims:transaction_filtered_amount_max_18_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 18 months|window=18 months|expression=max
+claims:transaction_filtered_amount_min_18_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 18 months|window=18 months|expression=min
+claims:transaction_filtered_amount_stdev_18_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 18 months|window=18 months|expression=std_dev
+claims:transaction_filtered_amount_mean_18_mth|source=claims:transaction_filtered_amount|description=The mean over the past 18 months|window=18 months|expression=mean
+claims:transaction_filtered_amount_gradient_24_mth|source=claims:transaction_filtered_amount|description=The gradient over the past 24 months|window=24 months|expression=gradient
+claims:transaction_filtered_amount_sum_24_mth|source=claims:transaction_filtered_amount|description=The sum over the past 24 months|window=24 months|expression=sum
+claims:transaction_filtered_amount_max_24_mth|source=claims:transaction_filtered_amount|description=The maximum over the past 24 months|window=24 months|expression=max
+claims:transaction_filtered_amount_min_24_mth|source=claims:transaction_filtered_amount|description=The minimum over the past 24 months|window=24 months|expression=min
+claims:transaction_filtered_amount_stdev_24_mth|source=claims:transaction_filtered_amount|description=The std deviation over the past 24 months|window=24 months|expression=std_dev
+claims:transaction_filtered_amount_mean_24_mth|source=claims:transaction_filtered_amount|description=The mean over the past 24 months|window=24 months|expression=mean
+claims:accidenttype|encoding=long|type=categorical|description=The ACCIDENTTYPE field|tombstone=NA
+claims:agencyid|encoding=string|type=categorical|description=The AGENCYID field|tombstone=NA
+claims:archivepartition|encoding=long|type=categorical|description=The ARCHIVEPARTITION field|tombstone=NA
+claims:assignedbyuserid|encoding=long|type=categorical|description=The ASSIGNEDBYUSERID field|tombstone=NA
+claims:assignedgroupid|encoding=long|type=categorical|description=The ASSIGNEDGROUPID field|tombstone=NA
+claims:assignedqueueid|encoding=long|type=categorical|description=The ASSIGNEDQUEUEID field|tombstone=NA
+claims:assigneduserid|encoding=long|type=categorical|description=The ASSIGNEDUSERID field|tombstone=NA
+claims:assignmentdate|encoding=string|type=categorical|description=The ASSIGNMENTDATE field|tombstone=NA
+claims:assignmentstatus|encoding=long|type=categorical|description=The ASSIGNMENTSTATUS field|tombstone=NA
+claims:beanversion|encoding=long|type=categorical|description=The BEANVERSION field|tombstone=NA
+claims:benefitsstatusdcsn|encoding=string|type=categorical|description=The BENEFITSSTATUSDCSN field|tombstone=NA
+claims:catastropheid|encoding=long|type=categorical|description=The CATASTROPHEID field|tombstone=NA
+claims:claimantdenormid|encoding=long|type=categorical|description=The CLAIMANTDENORMID field|tombstone=NA
+claims:claimantrprtddate|encoding=string|type=categorical|description=The CLAIMANTRPRTDDATE field|tombstone=NA
+claims:claimnumber|encoding=string|type=categorical|description=The CLAIMNUMBER field|tombstone=NA
+claims:claimsource|encoding=long|type=categorical|description=The CLAIMSOURCE field|tombstone=NA
+claims:claimtier|encoding=long|type=categorical|description=The CLAIMTIER field|tombstone=NA
+claims:claimworkcompid|encoding=long|type=categorical|description=The CLAIMWORKCOMPID field|tombstone=NA
+claims:closedate|encoding=string|type=categorical|description=The CLOSEDATE field|tombstone=NA
+claims:closedoutcome|encoding=long|type=categorical|description=The CLOSEDOUTCOME field|tombstone=NA
+claims:commit_timestamp|encoding=string|type=categorical|description=The COMMIT_TIMESTAMP field|tombstone=NA
+claims:computersecurity|encoding=string|type=categorical|description=The COMPUTERSECURITY field|tombstone=NA
+claims:concurrentemp|encoding=long|type=categorical|description=The CONCURRENTEMP field|tombstone=NA
+claims:coverageinquestion|encoding=string|type=categorical|description=The COVERAGEINQUESTION field|tombstone=NA
+claims:createtime|encoding=string|type=categorical|description=The CREATETIME field|tombstone=NA
+claims:createuserid|encoding=long|type=categorical|description=The CREATEUSERID field|tombstone=NA
+claims:currency|encoding=long|type=categorical|description=The CURRENCY field|tombstone=NA
+claims:currentconditions|encoding=string|type=categorical|description=The CURRENTCONDITIONS field|tombstone=NA
+claims:datecompdcsndue|encoding=string|type=categorical|description=The DATECOMPDCSNDUE field|tombstone=NA
+claims:datecompdcsnmade|encoding=string|type=categorical|description=The DATECOMPDCSNMADE field|tombstone=NA
+claims:dateeligibleforarchive|encoding=string|type=categorical|description=The DATEELIGIBLEFORARCHIVE field|tombstone=NA
+claims:dateformgiventoemp|encoding=string|type=categorical|description=The DATEFORMGIVENTOEMP field|tombstone=NA
+claims:dateformretbyemp|encoding=string|type=categorical|description=The DATEFORMRETBYEMP field|tombstone=NA
+claims:daterptdtoagent|encoding=string|type=categorical|description=The DATERPTDTOAGENT field|tombstone=NA
+claims:daterptdtoemployer|encoding=string|type=categorical|description=The DATERPTDTOEMPLOYER field|tombstone=NA
+claims:daterptdtoinsured|encoding=string|type=categorical|description=The DATERPTDTOINSURED field|tombstone=NA
+claims:daterptdtoinsurer_ext|encoding=string|type=categorical|description=The DATERPTDTOINSURER_EXT field|tombstone=NA
+claims:deathdate|encoding=string|type=categorical|description=The DEATHDATE field|tombstone=NA
+claims:description|encoding=string|type=categorical|description=The DESCRIPTION field|tombstone=NA
+claims:diagnosticcnsistnt|encoding=string|type=categorical|description=The DIAGNOSTICCNSISTNT field|tombstone=NA
+claims:drugsinvolved|encoding=long|type=categorical|description=The DRUGSINVOLVED field|tombstone=NA
+claims:employervalidityreason|encoding=string|type=categorical|description=The EMPLOYERVALIDITYREASON field|tombstone=NA
+claims:employmentdataid|encoding=long|type=categorical|description=The EMPLOYMENTDATAID field|tombstone=NA
+claims:employmentinjury|encoding=string|type=categorical|description=The EMPLOYMENTINJURY field|tombstone=NA
+claims:empqusvalidity|encoding=long|type=categorical|description=The EMPQUSVALIDITY field|tombstone=NA
+claims:empsentmpnnotice|encoding=string|type=categorical|description=The EMPSENTMPNNOTICE field|tombstone=NA
+claims:examinationdate|encoding=string|type=categorical|description=The EXAMINATIONDATE field|tombstone=NA
+claims:exposurebegan|encoding=string|type=categorical|description=The EXPOSUREBEGAN field|tombstone=NA
+claims:exposureended|encoding=string|type=categorical|description=The EXPOSUREENDED field|tombstone=NA
+claims:extract_timestamp|encoding=string|type=categorical|description=The EXTRACT_TIMESTAMP field|tombstone=NA
+claims:fault|encoding=string|type=categorical|description=The FAULT field|tombstone=NA
+claims:faultrating|encoding=long|type=categorical|description=The FAULTRATING field|tombstone=NA
+claims:firedeptinfo|encoding=string|type=categorical|description=The FIREDEPTINFO field|tombstone=NA
+claims:firstnoticesuit|encoding=string|type=categorical|description=The FIRSTNOTICESUIT field|tombstone=NA
+claims:flagged|encoding=long|type=categorical|description=The FLAGGED field|tombstone=NA
+claims:flaggeddate|encoding=string|type=categorical|description=The FLAGGEDDATE field|tombstone=NA
+claims:flaggedreason|encoding=string|type=categorical|description=The FLAGGEDREASON field|tombstone=NA
+claims:furthertreatment|encoding=string|type=categorical|description=The FURTHERTREATMENT field|tombstone=NA
+claims:hazardouswaste|encoding=string|type=categorical|description=The HAZARDOUSWASTE field|tombstone=NA
+claims:hospitaldate|encoding=string|type=categorical|description=The HOSPITALDATE field|tombstone=NA
+claims:hospitaldays|encoding=long|type=categorical|description=The HOSPITALDAYS field|tombstone=NA
+claims:howreported|encoding=long|type=categorical|description=The HOWREPORTED field|tombstone=NA
+claims:incidentreport|encoding=string|type=categorical|description=The INCIDENTREPORT field|tombstone=NA
+claims:injuredonpremises|encoding=string|type=categorical|description=The INJUREDONPREMISES field|tombstone=NA
+claims:injuredregularjob|encoding=string|type=categorical|description=The INJUREDREGULARJOB field|tombstone=NA
+claims:injwkrinmpn|encoding=string|type=categorical|description=The INJWKRINMPN field|tombstone=NA
+claims:insureddenormid|encoding=long|type=categorical|description=The INSUREDDENORMID field|tombstone=NA
+claims:insuredpremises|encoding=string|type=categorical|description=The INSUREDPREMISES field|tombstone=NA
+claims:insurersentmpnnotice|encoding=string|type=categorical|description=The INSURERSENTMPNNOTICE field|tombstone=NA
+claims:integerext|encoding=long|type=categorical|description=The INTEGEREXT field|tombstone=NA
+claims:isoenabled|encoding=string|type=categorical|description=The ISOENABLED field|tombstone=NA
+claims:isoknown|encoding=string|type=categorical|description=The ISOKNOWN field|tombstone=NA
+claims:isoreceivedate|encoding=string|type=categorical|description=The ISORECEIVEDATE field|tombstone=NA
+claims:isosenddate|encoding=string|type=categorical|description=The ISOSENDDATE field|tombstone=NA
+claims:isostatus|encoding=long|type=categorical|description=The ISOSTATUS field|tombstone=NA
+claims:jurisdictionstate|encoding=long|type=categorical|description=The JURISDICTIONSTATE field|tombstone=NA
+claims:largelossnotificationstatus|encoding=long|type=categorical|description=The LARGELOSSNOTIFICATIONSTATUS field|tombstone=NA
+claims:litigationstatus|encoding=long|type=categorical|description=The LITIGATIONSTATUS field|tombstone=NA
+claims:loadcommandid|encoding=long|type=categorical|description=The LOADCOMMANDID field|tombstone=NA
+claims:lobcode|encoding=long|type=categorical|description=The LOBCODE field|tombstone=NA
+claims:locationcodeid|encoding=long|type=categorical|description=The LOCATIONCODEID field|tombstone=NA
+claims:locationoftheft|encoding=long|type=categorical|description=The LOCATIONOFTHEFT field|tombstone=NA
+claims:lockingcolumn|encoding=long|type=categorical|description=The LOCKINGCOLUMN field|tombstone=NA
+claims:losscause|encoding=long|type=categorical|description=The LOSSCAUSE field|tombstone=NA
+claims:losscover_ext|encoding=long|type=categorical|description=The LOSSCOVER_EXT field|tombstone=NA
+claims:lossdate|encoding=string|type=categorical|description=The LOSSDATE field|tombstone=NA
+claims:losslocationcode|encoding=string|type=categorical|description=The LOSSLOCATIONCODE field|tombstone=NA
+claims:losslocationid|encoding=long|type=categorical|description=The LOSSLOCATIONID field|tombstone=NA
+claims:losstype|encoding=long|type=categorical|description=The LOSSTYPE field|tombstone=NA
+claims:maincontacttype|encoding=long|type=categorical|description=The MAINCONTACTTYPE field|tombstone=NA
+claims:manifestationdate|encoding=string|type=categorical|description=The MANIFESTATIONDATE field|tombstone=NA
+claims:mmidate|encoding=string|type=categorical|description=The MMIDATE field|tombstone=NA
+claims:modifieddutyavail|encoding=string|type=categorical|description=The MODIFIEDDUTYAVAIL field|tombstone=NA
+claims:mold|encoding=string|type=categorical|description=The MOLD field|tombstone=NA
+claims:otherrecovstatus|encoding=long|type=categorical|description=The OTHERRECOVSTATUS field|tombstone=NA
+claims:permissionrequired|encoding=long|type=categorical|description=The PERMISSIONREQUIRED field|tombstone=NA
+claims:policedeptinfo|encoding=string|type=categorical|description=The POLICEDEPTINFO field|tombstone=NA
+claims:policyid|encoding=long|type=categorical|description=The POLICYID field|tombstone=NA
+claims:prcategorisationclaimtype|encoding=long|type=categorical|description=The PRCATEGORISATIONCLAIMTYPE field|tombstone=NA
+claims:prcategorisationpriority|encoding=long|type=categorical|description=The PRCATEGORISATIONPRIORITY field|tombstone=NA
+claims:preexdisblty|encoding=string|type=categorical|description=The PREEXDISBLTY field|tombstone=NA
+claims:previousgroupid|encoding=long|type=categorical|description=The PREVIOUSGROUPID field|tombstone=NA
+claims:previousqueueid|encoding=long|type=categorical|description=The PREVIOUSQUEUEID field|tombstone=NA
+claims:previoususerid|encoding=long|type=categorical|description=The PREVIOUSUSERID field|tombstone=NA
+claims:progress|encoding=long|type=categorical|description=The PROGRESS field|tombstone=NA
+claims:ptpinmpn|encoding=string|type=categorical|description=The PTPINMPN field|tombstone=NA
+claims:publicid|encoding=string|type=categorical|description=The PUBLICID field|tombstone=NA
+claims:purgedate|encoding=string|type=categorical|description=The PURGEDATE field|tombstone=NA
+claims:record_type|encoding=string|type=categorical|description=The RECORD_TYPE field|tombstone=NA
+claims:reinsuranceflaggedstatus|encoding=long|type=categorical|description=The REINSURANCEFLAGGEDSTATUS field|tombstone=NA
+claims:reinsurancereportable|encoding=string|type=categorical|description=The REINSURANCEREPORTABLE field|tombstone=NA
+claims:reopendate|encoding=string|type=categorical|description=The REOPENDATE field|tombstone=NA
+claims:reopenedreason|encoding=long|type=categorical|description=The REOPENEDREASON field|tombstone=NA
+claims:reportedbytype|encoding=long|type=categorical|description=The REPORTEDBYTYPE field|tombstone=NA
+claims:reporteddate|encoding=string|type=categorical|description=The REPORTEDDATE field|tombstone=NA
+claims:reportonlyreason_ext|encoding=long|type=categorical|description=The REPORTONLYREASON_EXT field|tombstone=NA
+claims:retired|encoding=long|type=categorical|description=The RETIRED field|tombstone=NA
+claims:safetyequipprov|encoding=string|type=categorical|description=The SAFETYEQUIPPROV field|tombstone=NA
+claims:safetyequipused|encoding=string|type=categorical|description=The SAFETYEQUIPUSED field|tombstone=NA
+claims:salvagestatus|encoding=long|type=categorical|description=The SALVAGESTATUS field|tombstone=NA
+claims:sc_accdamagebyinsuredevent|encoding=string|type=categorical|description=The SC_ACCDAMAGEBYINSUREDEVENT field|tombstone=NA
+claims:sc_accdamagecause|encoding=long|type=categorical|description=The SC_ACCDAMAGECAUSE field|tombstone=NA
+claims:sc_accdamagecauseperson|encoding=long|type=categorical|description=The SC_ACCDAMAGECAUSEPERSON field|tombstone=NA
+claims:sc_accdamagedeliberate|encoding=string|type=categorical|description=The SC_ACCDAMAGEDELIBERATE field|tombstone=NA
+claims:sc_accidentclaimnumber|encoding=string|type=categorical|description=The SC_ACCIDENTCLAIMNUMBER field|tombstone=NA
+claims:sc_accidentlocation|encoding=long|type=categorical|description=The SC_ACCIDENTLOCATION field|tombstone=NA
+claims:sc_accidentlocationcountry|encoding=long|type=categorical|description=The SC_ACCIDENTLOCATIONCOUNTRY field|tombstone=NA
+claims:sc_accidentlocationdesc|encoding=string|type=categorical|description=The SC_ACCIDENTLOCATIONDESC field|tombstone=NA
+claims:sc_accidentlocationpostcode|encoding=string|type=categorical|description=The SC_ACCIDENTLOCATIONPOSTCODE field|tombstone=NA
+claims:sc_accidentlocationstreet|encoding=string|type=categorical|description=The SC_ACCIDENTLOCATIONSTREET field|tombstone=NA
+claims:sc_agencybreakdown|encoding=string|type=categorical|description=The SC_AGENCYBREAKDOWN field|tombstone=NA
+claims:sc_agencynotifieddate|encoding=string|type=categorical|description=The SC_AGENCYNOTIFIEDDATE field|tombstone=NA
+claims:sc_agencyofinjury|encoding=string|type=categorical|description=The SC_AGENCYOFINJURY field|tombstone=NA
+claims:sc_agentid|encoding=string|type=categorical|description=The SC_AGENTID field|tombstone=NA
+claims:sc_alternateclaimnumber1|encoding=string|type=categorical|description=The SC_ALTERNATECLAIMNUMBER1 field|tombstone=NA
+claims:sc_alternateclaimnumber2|encoding=string|type=categorical|description=The SC_ALTERNATECLAIMNUMBER2 field|tombstone=NA
+claims:sc_alternateclaimnumbertype1|encoding=string|type=categorical|description=The SC_ALTERNATECLAIMNUMBERTYPE1 field|tombstone=NA
+claims:sc_alternateclaimnumbertype2|encoding=string|type=categorical|description=The SC_ALTERNATECLAIMNUMBERTYPE2 field|tombstone=NA
+claims:sc_animalbirdbreakglass|encoding=string|type=categorical|description=The SC_ANIMALBIRDBREAKGLASS field|tombstone=NA
+claims:sc_animaldamagedesc|encoding=string|type=categorical|description=The SC_ANIMALDAMAGEDESC field|tombstone=NA
+claims:sc_animaldamagetype|encoding=long|type=categorical|description=The SC_ANIMALDAMAGETYPE field|tombstone=NA
+claims:sc_animaldesc|encoding=string|type=categorical|description=The SC_ANIMALDESC field|tombstone=NA
+claims:sc_animalownedbyyou|encoding=string|type=categorical|description=The SC_ANIMALOWNEDBYYOU field|tombstone=NA
+claims:sc_animalownerins|encoding=string|type=categorical|description=The SC_ANIMALOWNERINS field|tombstone=NA
+claims:sc_animalownerknown|encoding=string|type=categorical|description=The SC_ANIMALOWNERKNOWN field|tombstone=NA
+claims:sc_animaltrapped|encoding=string|type=categorical|description=The SC_ANIMALTRAPPED field|tombstone=NA
+claims:sc_animaltype|encoding=long|type=categorical|description=The SC_ANIMALTYPE field|tombstone=NA
+claims:sc_bodylocation|encoding=string|type=categorical|description=The SC_BODYLOCATION field|tombstone=NA
+claims:sc_burnout|encoding=long|type=categorical|description=The SC_BURNOUT field|tombstone=NA
+claims:sc_burnoutanyfoodspoilage|encoding=string|type=categorical|description=The SC_BURNOUTANYFOODSPOILAGE field|tombstone=NA
+claims:sc_burnoutappwarranty|encoding=string|type=categorical|description=The SC_BURNOUTAPPWARRANTY field|tombstone=NA
+claims:sc_burnoutclaimtype|encoding=long|type=categorical|description=The SC_BURNOUTCLAIMTYPE field|tombstone=NA
+claims:sc_burnoutisbusinessrelated|encoding=string|type=categorical|description=The SC_BURNOUTISBUSINESSRELATED field|tombstone=NA
+claims:sc_burnoutisfridgeorfreezer|encoding=string|type=categorical|description=The SC_BURNOUTISFRIDGEORFREEZER field|tombstone=NA
+claims:sc_burnoutisinsuredevent|encoding=string|type=categorical|description=The SC_BURNOUTISINSUREDEVENT field|tombstone=NA
+claims:sc_burnoutitem|encoding=long|type=categorical|description=The SC_BURNOUTITEM field|tombstone=NA
+claims:sc_burnoutitemother|encoding=string|type=categorical|description=The SC_BURNOUTITEMOTHER field|tombstone=NA
+claims:sc_burnoutolderthan10years|encoding=string|type=categorical|description=The SC_BURNOUTOLDERTHAN10YEARS field|tombstone=NA
+claims:sc_burnoutspoilagecause|encoding=long|type=categorical|description=The SC_BURNOUTSPOILAGECAUSE field|tombstone=NA
+claims:sc_burnout_applianceage|encoding=long|type=categorical|description=The SC_BURNOUT_APPLIANCEAGE field|tombstone=NA
+claims:sc_burnout_imppower_otherprop|encoding=string|type=categorical|description=The SC_BURNOUT_IMPPOWER_OTHERPROP field|tombstone=NA
+claims:sc_burnout_imppower_response|encoding=string|type=categorical|description=The SC_BURNOUT_IMPPOWER_RESPONSE field|tombstone=NA
+claims:sc_burnout_imppower_visible|encoding=string|type=categorical|description=The SC_BURNOUT_IMPPOWER_VISIBLE field|tombstone=NA
+claims:sc_burnout_imppropn_cause|encoding=long|type=categorical|description=The SC_BURNOUT_IMPPROPN_CAUSE field|tombstone=NA
+claims:sc_burnout_imppropy_cause|encoding=long|type=categorical|description=The SC_BURNOUT_IMPPROPY_CAUSE field|tombstone=NA
+claims:sc_burnout_imptree_health|encoding=string|type=categorical|description=The SC_BURNOUT_IMPTREE_HEALTH field|tombstone=NA
+claims:sc_burnout_impveh_resported|encoding=string|type=categorical|description=The SC_BURNOUT_IMPVEH_RESPORTED field|tombstone=NA
+claims:sc_burnout_ldamagehome|encoding=string|type=categorical|description=The SC_BURNOUT_LDAMAGEHOME field|tombstone=NA
+claims:sc_burnout_lsconf|encoding=long|type=categorical|description=The SC_BURNOUT_LSCONF field|tombstone=NA
+claims:sc_burnout_lstrike|encoding=long|type=categorical|description=The SC_BURNOUT_LSTRIKE field|tombstone=NA
+claims:sc_burnout_motorsize|encoding=long|type=categorical|description=The SC_BURNOUT_MOTORSIZE field|tombstone=NA
+claims:sc_burnout_property|encoding=string|type=categorical|description=The SC_BURNOUT_PROPERTY field|tombstone=NA
+claims:sc_burnout_proptree|encoding=string|type=categorical|description=The SC_BURNOUT_PROPTREE field|tombstone=NA
+claims:sc_casemgr|encoding=string|type=categorical|description=The SC_CASEMGR field|tombstone=NA
+claims:sc_casemgrdetails|encoding=string|type=categorical|description=The SC_CASEMGRDETAILS field|tombstone=NA
+claims:sc_casemgrreason|encoding=long|type=categorical|description=The SC_CASEMGRREASON field|tombstone=NA
+claims:sc_casetempaccomdetails|encoding=string|type=categorical|description=The SC_CASETEMPACCOMDETAILS field|tombstone=NA
+claims:sc_casnotificationid|encoding=string|type=categorical|description=The SC_CASNOTIFICATIONID field|tombstone=NA
+claims:sc_catcoverageboth|encoding=long|type=categorical|description=The SC_CATCOVERAGEBOTH field|tombstone=NA
+claims:sc_catcoveragebuilding|encoding=long|type=categorical|description=The SC_CATCOVERAGEBUILDING field|tombstone=NA
+claims:sc_catcoveragecontents|encoding=long|type=categorical|description=The SC_CATCOVERAGECONTENTS field|tombstone=NA
+claims:sc_catdamagetype|encoding=long|type=categorical|description=The SC_CATDAMAGETYPE field|tombstone=NA
+claims:sc_chippedorscratched|encoding=string|type=categorical|description=The SC_CHIPPEDORSCRATCHED field|tombstone=NA
+claims:sc_claimallocationcode|encoding=long|type=categorical|description=The SC_CLAIMALLOCATIONCODE field|tombstone=NA
+claims:sc_claimantdateofbirth|encoding=string|type=categorical|description=The SC_CLAIMANTDATEOFBIRTH field|tombstone=NA
+claims:sc_claimantsuburb|encoding=string|type=categorical|description=The SC_CLAIMANTSUBURB field|tombstone=NA
+claims:sc_claimauto|encoding=long|type=categorical|description=The SC_CLAIMAUTO field|tombstone=NA
+claims:sc_claimcohort|encoding=long|type=categorical|description=The SC_CLAIMCOHORT field|tombstone=NA
+claims:sc_claimdecision|encoding=long|type=categorical|description=The SC_CLAIMDECISION field|tombstone=NA
+claims:sc_claimdecisioncomments|encoding=string|type=categorical|description=The SC_CLAIMDECISIONCOMMENTS field|tombstone=NA
+claims:sc_claimeventquestions|encoding=long|type=categorical|description=The SC_CLAIMEVENTQUESTIONS field|tombstone=NA
+claims:sc_claimhome|encoding=long|type=categorical|description=The SC_CLAIMHOME field|tombstone=NA
+claims:sc_claimpriority|encoding=long|type=categorical|description=The SC_CLAIMPRIORITY field|tombstone=NA
+claims:sc_claimproctype|encoding=long|type=categorical|description=The SC_CLAIMPROCTYPE field|tombstone=NA
+claims:sc_claimreconcilereport|encoding=long|type=categorical|description=The SC_CLAIMRECONCILEREPORT field|tombstone=NA
+claims:sc_claimrejectreason|encoding=long|type=categorical|description=The SC_CLAIMREJECTREASON field|tombstone=NA
+claims:sc_claimreviewnextdate|encoding=string|type=categorical|description=The SC_CLAIMREVIEWNEXTDATE field|tombstone=NA
+claims:sc_claimtransfer|encoding=long|type=categorical|description=The SC_CLAIMTRANSFER field|tombstone=NA
+claims:sc_claimtype|encoding=long|type=categorical|description=The SC_CLAIMTYPE field|tombstone=NA
+claims:sc_closedoutcome|encoding=long|type=categorical|description=The SC_CLOSEDOUTCOME field|tombstone=NA
+claims:sc_commentforinjury|encoding=string|type=categorical|description=The SC_COMMENTFORINJURY field|tombstone=NA
+claims:sc_commentforocc|encoding=string|type=categorical|description=The SC_COMMENTFOROCC field|tombstone=NA
+claims:sc_commercialclaim|encoding=long|type=categorical|description=The SC_COMMERCIALCLAIM field|tombstone=NA
+claims:sc_consolprojectid|encoding=long|type=categorical|description=The SC_CONSOLPROJECTID field|tombstone=NA
+claims:sc_contentsremoval|encoding=string|type=categorical|description=The SC_CONTENTSREMOVAL field|tombstone=NA
+claims:sc_contractdate|encoding=string|type=categorical|description=The SC_CONTRACTDATE field|tombstone=NA
+claims:sc_crimhist|encoding=string|type=categorical|description=The SC_CRIMHIST field|tombstone=NA
+claims:sc_crimhistdisc|encoding=string|type=categorical|description=The SC_CRIMHISTDISC field|tombstone=NA
+claims:sc_ctpflag|encoding=string|type=categorical|description=The SC_CTPFLAG field|tombstone=NA
+claims:sc_damdeliberatedamage|encoding=string|type=categorical|description=The SC_DAMDELIBERATEDAMAGE field|tombstone=NA
+claims:sc_dayspropertyvacant|encoding=long|type=categorical|description=The SC_DAYSPROPERTYVACANT field|tombstone=NA
+claims:sc_decaccepted|encoding=string|type=categorical|description=The SC_DECACCEPTED field|tombstone=NA
+claims:sc_decconfirmed|encoding=string|type=categorical|description=The SC_DECCONFIRMED field|tombstone=NA
+claims:sc_decdeclinereason|encoding=string|type=categorical|description=The SC_DECDECLINEREASON field|tombstone=NA
+claims:sc_dependentsequencenumber|encoding=long|type=categorical|description=The SC_DEPENDENTSEQUENCENUMBER field|tombstone=NA
+claims:sc_doichangereason|encoding=string|type=categorical|description=The SC_DOICHANGEREASON field|tombstone=NA
+claims:sc_duplicate|encoding=string|type=categorical|description=The SC_DUPLICATE field|tombstone=NA
+claims:sc_dutystatus|encoding=long|type=categorical|description=The SC_DUTYSTATUS field|tombstone=NA
+claims:sc_earthquakedate|encoding=string|type=categorical|description=The SC_EARTHQUAKEDATE field|tombstone=NA
+claims:sc_embaccountrecords|encoding=string|type=categorical|description=The SC_EMBACCOUNTRECORDS field|tombstone=NA
+claims:sc_embdateaware|encoding=string|type=categorical|description=The SC_EMBDATEAWARE field|tombstone=NA
+claims:sc_embfundswithagent|encoding=string|type=categorical|description=The SC_EMBFUNDSWITHAGENT field|tombstone=NA
+claims:sc_embtheftbyemployee|encoding=string|type=categorical|description=The SC_EMBTHEFTBYEMPLOYEE field|tombstone=NA
+claims:sc_emergacttakenbyemergserv|encoding=string|type=categorical|description=The SC_EMERGACTTAKENBYEMERGSERV field|tombstone=NA
+claims:sc_emergacttakenbyyou|encoding=string|type=categorical|description=The SC_EMERGACTTAKENBYYOU field|tombstone=NA
+claims:sc_emergency|encoding=string|type=categorical|description=The SC_EMERGENCY field|tombstone=NA
+claims:sc_emergencyactioncomments|encoding=string|type=categorical|description=The SC_EMERGENCYACTIONCOMMENTS field|tombstone=NA
+claims:sc_emergencypayment|encoding=string|type=categorical|description=The SC_EMERGENCYPAYMENT field|tombstone=NA
+claims:sc_entryviaopenarea|encoding=string|type=categorical|description=The SC_ENTRYVIAOPENAREA field|tombstone=NA
+claims:sc_excess|encoding=string|type=categorical|description=The SC_EXCESS field|tombstone=NA
+claims:sc_excesswaived|encoding=string|type=categorical|description=The SC_EXCESSWAIVED field|tombstone=NA
+claims:sc_excesswaivedreason|encoding=long|type=categorical|description=The SC_EXCESSWAIVEDREASON field|tombstone=NA
+claims:sc_explosiondesc|encoding=string|type=categorical|description=The SC_EXPLOSIONDESC field|tombstone=NA
+claims:sc_explosion_item|encoding=long|type=categorical|description=The SC_EXPLOSION_ITEM field|tombstone=NA
+claims:sc_explosion_otherdamage|encoding=string|type=categorical|description=The SC_EXPLOSION_OTHERDAMAGE field|tombstone=NA
+claims:sc_explosion_otherdescription|encoding=string|type=categorical|description=The SC_EXPLOSION_OTHERDESCRIPTION field|tombstone=NA
+claims:sc_firecause|encoding=long|type=categorical|description=The SC_FIRECAUSE field|tombstone=NA
+claims:sc_firedamage|encoding=long|type=categorical|description=The SC_FIREDAMAGE field|tombstone=NA
+claims:sc_firesource|encoding=long|type=categorical|description=The SC_FIRESOURCE field|tombstone=NA
+claims:sc_fire_cigarettes|encoding=string|type=categorical|description=The SC_FIRE_CIGARETTES field|tombstone=NA
+claims:sc_fire_flameorigin|encoding=string|type=categorical|description=The SC_FIRE_FLAMEORIGIN field|tombstone=NA
+claims:sc_fire_intent|encoding=string|type=categorical|description=The SC_FIRE_INTENT field|tombstone=NA
+claims:sc_fire_nakedflame|encoding=string|type=categorical|description=The SC_FIRE_NAKEDFLAME field|tombstone=NA
+claims:sc_fire_otherdescription|encoding=string|type=categorical|description=The SC_FIRE_OTHERDESCRIPTION field|tombstone=NA
+claims:sc_floodopenwalls|encoding=string|type=categorical|description=The SC_FLOODOPENWALLS field|tombstone=NA
+claims:sc_foodspoilagecause|encoding=long|type=categorical|description=The SC_FOODSPOILAGECAUSE field|tombstone=NA
+claims:sc_foodspoilageclaimable|encoding=string|type=categorical|description=The SC_FOODSPOILAGECLAIMABLE field|tombstone=NA
+claims:sc_forcedentry|encoding=string|type=categorical|description=The SC_FORCEDENTRY field|tombstone=NA
+claims:sc_forcedentrydetails|encoding=string|type=categorical|description=The SC_FORCEDENTRYDETAILS field|tombstone=NA
+claims:sc_fraudreferral|encoding=long|type=categorical|description=The SC_FRAUDREFERRAL field|tombstone=NA
+claims:sc_fraudreferralteam|encoding=long|type=categorical|description=The SC_FRAUDREFERRALTEAM field|tombstone=NA
+claims:sc_fulfilmentsystemstatus|encoding=long|type=categorical|description=The SC_FULFILMENTSYSTEMSTATUS field|tombstone=NA
+claims:sc_glassbreakageoption|encoding=long|type=categorical|description=The SC_GLASSBREAKAGEOPTION field|tombstone=NA
+claims:sc_healthoccupation|encoding=long|type=categorical|description=The SC_HEALTHOCCUPATION field|tombstone=NA
+claims:sc_idrstatus|encoding=long|type=categorical|description=The SC_IDRSTATUS field|tombstone=NA
+claims:sc_impactatinsaddress|encoding=string|type=categorical|description=The SC_IMPACTATINSADDRESS field|tombstone=NA
+claims:sc_impactcause|encoding=long|type=categorical|description=The SC_IMPACTCAUSE field|tombstone=NA
+claims:sc_impactobject|encoding=long|type=categorical|description=The SC_IMPACTOBJECT field|tombstone=NA
+claims:sc_impactotherprops|encoding=string|type=categorical|description=The SC_IMPACTOTHERPROPS field|tombstone=NA
+claims:sc_impactpartyknown|encoding=string|type=categorical|description=The SC_IMPACTPARTYKNOWN field|tombstone=NA
+claims:sc_impactpowerpolevis|encoding=string|type=categorical|description=The SC_IMPACTPOWERPOLEVIS field|tombstone=NA
+claims:sc_impactpowersurge|encoding=string|type=categorical|description=The SC_IMPACTPOWERSURGE field|tombstone=NA
+claims:sc_impactremoteuse|encoding=string|type=categorical|description=The SC_IMPACTREMOTEUSE field|tombstone=NA
+claims:sc_impactreported|encoding=string|type=categorical|description=The SC_IMPACTREPORTED field|tombstone=NA
+claims:sc_impacttreedangerous|encoding=string|type=categorical|description=The SC_IMPACTTREEDANGEROUS field|tombstone=NA
+claims:sc_impacttreehealth|encoding=string|type=categorical|description=The SC_IMPACTTREEHEALTH field|tombstone=NA
+claims:sc_impacttreelopping|encoding=string|type=categorical|description=The SC_IMPACTTREELOPPING field|tombstone=NA
+claims:sc_impacttreeorigin|encoding=string|type=categorical|description=The SC_IMPACTTREEORIGIN field|tombstone=NA
+claims:sc_impacttreeremoval|encoding=string|type=categorical|description=The SC_IMPACTTREEREMOVAL field|tombstone=NA
+claims:sc_impacttreestump|encoding=string|type=categorical|description=The SC_IMPACTTREESTUMP field|tombstone=NA
+claims:sc_importstatus|encoding=long|type=categorical|description=The SC_IMPORTSTATUS field|tombstone=NA
+claims:sc_incidentdescription|encoding=long|type=categorical|description=The SC_INCIDENTDESCRIPTION field|tombstone=NA
+claims:sc_incidentnumber|encoding=string|type=categorical|description=The SC_INCIDENTNUMBER field|tombstone=NA
+claims:sc_incidentreport|encoding=long|type=categorical|description=The SC_INCIDENTREPORT field|tombstone=NA
+claims:sc_incidentreported|encoding=string|type=categorical|description=The SC_INCIDENTREPORTED field|tombstone=NA
+claims:sc_informeddate|encoding=string|type=categorical|description=The SC_INFORMEDDATE field|tombstone=NA
+claims:sc_inhibitpayment|encoding=long|type=categorical|description=The SC_INHIBITPAYMENT field|tombstone=NA
+claims:sc_injury|encoding=string|type=categorical|description=The SC_INJURY field|tombstone=NA
+claims:sc_injurybodylocation|encoding=string|type=categorical|description=The SC_INJURYBODYLOCATION field|tombstone=NA
+claims:sc_insurednotifieddate|encoding=string|type=categorical|description=The SC_INSUREDNOTIFIEDDATE field|tombstone=NA
+claims:sc_insurernumber|encoding=string|type=categorical|description=The SC_INSURERNUMBER field|tombstone=NA
+claims:sc_isaccidentclaim|encoding=string|type=categorical|description=The SC_ISACCIDENTCLAIM field|tombstone=NA
+claims:sc_itcegstonbas|encoding=long|type=categorical|description=The SC_ITCEGSTONBAS field|tombstone=NA
+claims:sc_itcepremium|encoding=long|type=categorical|description=The SC_ITCEPREMIUM field|tombstone=NA
+claims:sc_itcepremium_confirmed|encoding=string|type=categorical|description=The SC_ITCEPREMIUM_CONFIRMED field|tombstone=NA
+claims:sc_itcetype|encoding=long|type=categorical|description=The SC_ITCETYPE field|tombstone=NA
+claims:sc_itceupdatetime|encoding=string|type=categorical|description=The SC_ITCEUPDATETIME field|tombstone=NA
+claims:sc_itce_abn|encoding=string|type=categorical|description=The SC_ITCE_ABN field|tombstone=NA
+claims:sc_itce_gstonbas|encoding=string|type=categorical|description=The SC_ITCE_GSTONBAS field|tombstone=NA
+claims:sc_itce_gstregistered|encoding=long|type=categorical|description=The SC_ITCE_GSTREGISTERED field|tombstone=NA
+claims:sc_itemfromspecificlist|encoding=string|type=categorical|description=The SC_ITEMFROMSPECIFICLIST field|tombstone=NA
+claims:sc_itemlostordamaged|encoding=long|type=categorical|description=The SC_ITEMLOSTORDAMAGED field|tombstone=NA
+claims:sc_legacyclaimno|encoding=string|type=categorical|description=The SC_LEGACYCLAIMNO field|tombstone=NA
+claims:sc_liabilitychangedate|encoding=string|type=categorical|description=The SC_LIABILITYCHANGEDATE field|tombstone=NA
+claims:sc_liabilityeffectivedate|encoding=string|type=categorical|description=The SC_LIABILITYEFFECTIVEDATE field|tombstone=NA
+claims:sc_liabilitystatus|encoding=long|type=categorical|description=The SC_LIABILITYSTATUS field|tombstone=NA
+claims:sc_ll_cause|encoding=string|type=categorical|description=The SC_LL_CAUSE field|tombstone=NA
+claims:sc_ll_claimant|encoding=long|type=categorical|description=The SC_LL_CLAIMANT field|tombstone=NA
+claims:sc_ll_claimantssolicitor|encoding=long|type=categorical|description=The SC_LL_CLAIMANTSSOLICITOR field|tombstone=NA
+claims:sc_ll_claimtype|encoding=long|type=categorical|description=The SC_LL_CLAIMTYPE field|tombstone=NA
+claims:sc_ll_datelodreceived|encoding=string|type=categorical|description=The SC_LL_DATELODRECEIVED field|tombstone=NA
+claims:sc_ll_isclaimantrepresented|encoding=string|type=categorical|description=The SC_LL_ISCLAIMANTREPRESENTED field|tombstone=NA
+claims:sc_ll_iscoresident|encoding=string|type=categorical|description=The SC_LL_ISCORESIDENT field|tombstone=NA
+claims:sc_ll_isexcludedcause|encoding=string|type=categorical|description=The SC_LL_ISEXCLUDEDCAUSE field|tombstone=NA
+claims:sc_ll_isillegaldamage|encoding=string|type=categorical|description=The SC_LL_ISILLEGALDAMAGE field|tombstone=NA
+claims:sc_ll_islegallycontrolled|encoding=string|type=categorical|description=The SC_LL_ISLEGALLYCONTROLLED field|tombstone=NA
+claims:sc_ll_isotherevent|encoding=string|type=categorical|description=The SC_LL_ISOTHEREVENT field|tombstone=NA
+claims:sc_ll_isownedbyinsured|encoding=string|type=categorical|description=The SC_LL_ISOWNEDBYINSURED field|tombstone=NA
+claims:sc_ll_isrentedhome|encoding=string|type=categorical|description=The SC_LL_ISRENTEDHOME field|tombstone=NA
+claims:sc_ll_location|encoding=long|type=categorical|description=The SC_LL_LOCATION field|tombstone=NA
+claims:sc_ll_occupancytype|encoding=long|type=categorical|description=The SC_LL_OCCUPANCYTYPE field|tombstone=NA
+claims:sc_ll_receivedlodorstatement|encoding=string|type=categorical|description=The SC_LL_RECEIVEDLODORSTATEMENT field|tombstone=NA
+claims:sc_ll_witnessesavailable|encoding=string|type=categorical|description=The SC_LL_WITNESSESAVAILABLE field|tombstone=NA
+claims:sc_lossatriskaddress|encoding=string|type=categorical|description=The SC_LOSSATRISKADDRESS field|tombstone=NA
+claims:sc_losscause|encoding=long|type=categorical|description=The SC_LOSSCAUSE field|tombstone=NA
+claims:sc_losscausesubtype|encoding=long|type=categorical|description=The SC_LOSSCAUSESUBTYPE field|tombstone=NA
+claims:sc_losspostcodeasnumber|encoding=long|type=categorical|description=The SC_LOSSPOSTCODEASNUMBER field|tombstone=NA
+claims:sc_maldmgtenantscause|encoding=long|type=categorical|description=The SC_MALDMGTENANTSCAUSE field|tombstone=NA
+claims:sc_maldmgtenantscosts|encoding=string|type=categorical|description=The SC_MALDMGTENANTSCOSTS field|tombstone=NA
+claims:sc_maldmgtenantsoccupy|encoding=string|type=categorical|description=The SC_MALDMGTENANTSOCCUPY field|tombstone=NA
+claims:sc_maliciouslydamaged|encoding=string|type=categorical|description=The SC_MALICIOUSLYDAMAGED field|tombstone=NA
+claims:sc_manualexcess|encoding=string|type=categorical|description=The SC_MANUALEXCESS field|tombstone=NA
+claims:sc_mechanismofinjury|encoding=string|type=categorical|description=The SC_MECHANISMOFINJURY field|tombstone=NA
+claims:sc_medicalexcesspaid|encoding=long|type=categorical|description=The SC_MEDICALEXCESSPAID field|tombstone=NA
+claims:sc_minsecurity|encoding=string|type=categorical|description=The SC_MINSECURITY field|tombstone=NA
+claims:sc_mostseriousinjury|encoding=string|type=categorical|description=The SC_MOSTSERIOUSINJURY field|tombstone=NA
+claims:sc_natureofinjury|encoding=string|type=categorical|description=The SC_NATUREOFINJURY field|tombstone=NA
+claims:sc_ncdallowed|encoding=string|type=categorical|description=The SC_NCDALLOWED field|tombstone=NA
+claims:sc_nightlycost|encoding=string|type=categorical|description=The SC_NIGHTLYCOST field|tombstone=NA
+claims:sc_nodamagedunits|encoding=long|type=categorical|description=The SC_NODAMAGEDUNITS field|tombstone=NA
+claims:sc_noncommonareadetails|encoding=string|type=categorical|description=The SC_NONCOMMONAREADETAILS field|tombstone=NA
+claims:sc_nottriggerassessoverride|encoding=string|type=categorical|description=The SC_NOTTRIGGERASSESSOVERRIDE field|tombstone=NA
+claims:sc_occspecneed|encoding=string|type=categorical|description=The SC_OCCSPECNEED field|tombstone=NA
+claims:sc_occurrenceaction|encoding=string|type=categorical|description=The SC_OCCURRENCEACTION field|tombstone=NA
+claims:sc_occurrencemachine|encoding=string|type=categorical|description=The SC_OCCURRENCEMACHINE field|tombstone=NA
+claims:sc_occurrencesuburb|encoding=string|type=categorical|description=The SC_OCCURRENCESUBURB field|tombstone=NA
+claims:sc_originaltotalestimateitems|encoding=long|type=categorical|description=The SC_ORIGINALTOTALESTIMATEITEMS field|tombstone=NA
+claims:sc_originaltotalestimatevalue|encoding=string|type=categorical|description=The SC_ORIGINALTOTALESTIMATEVALUE field|tombstone=NA
+claims:sc_overridereasondetails|encoding=string|type=categorical|description=The SC_OVERRIDEREASONDETAILS field|tombstone=NA
+claims:sc_partiesfound|encoding=string|type=categorical|description=The SC_PARTIESFOUND field|tombstone=NA
+claims:sc_permanentoccupancy|encoding=string|type=categorical|description=The SC_PERMANENTOCCUPANCY field|tombstone=NA
+claims:sc_petanothervet|encoding=string|type=categorical|description=The SC_PETANOTHERVET field|tombstone=NA
+claims:sc_petanothervetdetails|encoding=string|type=categorical|description=The SC_PETANOTHERVETDETAILS field|tombstone=NA
+claims:sc_petbusiness|encoding=string|type=categorical|description=The SC_PETBUSINESS field|tombstone=NA
+claims:sc_petcongenital|encoding=string|type=categorical|description=The SC_PETCONGENITAL field|tombstone=NA
+claims:sc_petcover|encoding=string|type=categorical|description=The SC_PETCOVER field|tombstone=NA
+claims:sc_petlisted|encoding=string|type=categorical|description=The SC_PETLISTED field|tombstone=NA
+claims:sc_petlostordead|encoding=string|type=categorical|description=The SC_PETLOSTORDEAD field|tombstone=NA
+claims:sc_petpermanentoccupancy|encoding=string|type=categorical|description=The SC_PETPERMANENTOCCUPANCY field|tombstone=NA
+claims:sc_petpreexclaim|encoding=string|type=categorical|description=The SC_PETPREEXCLAIM field|tombstone=NA
+claims:sc_petreason|encoding=long|type=categorical|description=The SC_PETREASON field|tombstone=NA
+claims:sc_petroutine|encoding=string|type=categorical|description=The SC_PETROUTINE field|tombstone=NA
+claims:sc_petshow|encoding=string|type=categorical|description=The SC_PETSHOW field|tombstone=NA
+claims:sc_policybrand|encoding=long|type=categorical|description=The SC_POLICYBRAND field|tombstone=NA
+claims:sc_policylocationfk|encoding=long|type=categorical|description=The SC_POLICYLOCATIONFK field|tombstone=NA
+claims:sc_policyportfolio|encoding=string|type=categorical|description=The SC_POLICYPORTFOLIO field|tombstone=NA
+claims:sc_polsrtreason|encoding=long|type=categorical|description=The SC_POLSRTREASON field|tombstone=NA
+claims:sc_preexistingillness|encoding=string|type=categorical|description=The SC_PREEXISTINGILLNESS field|tombstone=NA
+claims:sc_premiumclass|encoding=long|type=categorical|description=The SC_PREMIUMCLASS field|tombstone=NA
+claims:sc_previousclosedate|encoding=string|type=categorical|description=The SC_PREVIOUSCLOSEDATE field|tombstone=NA
+claims:sc_previouspolicynumber|encoding=string|type=categorical|description=The SC_PREVIOUSPOLICYNUMBER field|tombstone=NA
+claims:sc_previousreopendate|encoding=string|type=categorical|description=The SC_PREVIOUSREOPENDATE field|tombstone=NA
+claims:sc_primarydoctorfkid|encoding=long|type=categorical|description=The SC_PRIMARYDOCTORFKID field|tombstone=NA
+claims:sc_prn|encoding=string|type=categorical|description=The SC_PRN field|tombstone=NA
+claims:sc_propsafe|encoding=string|type=categorical|description=The SC_PROPSAFE field|tombstone=NA
+claims:sc_reasonableexcuse|encoding=long|type=categorical|description=The SC_REASONABLEEXCUSE field|tombstone=NA
+claims:sc_recoveriesdata|encoding=long|type=categorical|description=The SC_RECOVERIESDATA field|tombstone=NA
+claims:sc_recoverypotential|encoding=string|type=categorical|description=The SC_RECOVERYPOTENTIAL field|tombstone=NA
+claims:sc_recurrenceinjurydate|encoding=string|type=categorical|description=The SC_RECURRENCEINJURYDATE field|tombstone=NA
+claims:sc_referralreason|encoding=string|type=categorical|description=The SC_REFERRALREASON field|tombstone=NA
+claims:sc_rejectoverride|encoding=long|type=categorical|description=The SC_REJECTOVERRIDE field|tombstone=NA
+claims:sc_rejectreasontxt|encoding=string|type=categorical|description=The SC_REJECTREASONTXT field|tombstone=NA
+claims:sc_renovationsoccuring|encoding=string|type=categorical|description=The SC_RENOVATIONSOCCURING field|tombstone=NA
+claims:sc_renovationsroofwallsdamage|encoding=string|type=categorical|description=The SC_RENOVATIONSROOFWALLSDAMAGE field|tombstone=NA
+claims:sc_rentlossreason|encoding=long|type=categorical|description=The SC_RENTLOSSREASON field|tombstone=NA
+claims:sc_rentloss_accessdist|encoding=long|type=categorical|description=The SC_RENTLOSS_ACCESSDIST field|tombstone=NA
+claims:sc_rentloss_agreetype|encoding=long|type=categorical|description=The SC_RENTLOSS_AGREETYPE field|tombstone=NA
+claims:sc_rentloss_consecperiod|encoding=long|type=categorical|description=The SC_RENTLOSS_CONSECPERIOD field|tombstone=NA
+claims:sc_rentloss_consecweeks|encoding=string|type=categorical|description=The SC_RENTLOSS_CONSECWEEKS field|tombstone=NA
+claims:sc_rentloss_defaultreason|encoding=long|type=categorical|description=The SC_RENTLOSS_DEFAULTREASON field|tombstone=NA
+claims:sc_rentloss_defaultweeks|encoding=long|type=categorical|description=The SC_RENTLOSS_DEFAULTWEEKS field|tombstone=NA
+claims:sc_rentloss_recattempt|encoding=string|type=categorical|description=The SC_RENTLOSS_RECATTEMPT field|tombstone=NA
+claims:sc_rentloss_rentagree|encoding=string|type=categorical|description=The SC_RENTLOSS_RENTAGREE field|tombstone=NA
+claims:sc_rentloss_replacetenants|encoding=string|type=categorical|description=The SC_RENTLOSS_REPLACETENANTS field|tombstone=NA
+claims:sc_rentloss_replacetenantsdesc|encoding=string|type=categorical|description=The SC_RENTLOSS_REPLACETENANTSDESC field|tombstone=NA
+claims:sc_renttenantagreetype|encoding=long|type=categorical|description=The SC_RENTTENANTAGREETYPE field|tombstone=NA
+claims:sc_reopenreason|encoding=long|type=categorical|description=The SC_REOPENREASON field|tombstone=NA
+claims:sc_reporttype|encoding=long|type=categorical|description=The SC_REPORTTYPE field|tombstone=NA
+claims:sc_revisedclaimnumber|encoding=string|type=categorical|description=The SC_REVISEDCLAIMNUMBER field|tombstone=NA
+claims:sc_riot_damagelegalauthority|encoding=string|type=categorical|description=The SC_RIOT_DAMAGELEGALAUTHORITY field|tombstone=NA
+claims:sc_riot_damagenuclear|encoding=string|type=categorical|description=The SC_RIOT_DAMAGENUCLEAR field|tombstone=NA
+claims:sc_riot_damagepollutants|encoding=string|type=categorical|description=The SC_RIOT_DAMAGEPOLLUTANTS field|tombstone=NA
+claims:sc_riot_damagewar|encoding=string|type=categorical|description=The SC_RIOT_DAMAGEWAR field|tombstone=NA
+claims:sc_roadcondition|encoding=long|type=categorical|description=The SC_ROADCONDITION field|tombstone=NA
+claims:sc_secondinjuryclaimflag|encoding=string|type=categorical|description=The SC_SECONDINJURYCLAIMFLAG field|tombstone=NA
+claims:sc_sharedclaimcode|encoding=long|type=categorical|description=The SC_SHAREDCLAIMCODE field|tombstone=NA
+claims:sc_sharingdetailsid|encoding=long|type=categorical|description=The SC_SHARINGDETAILSID field|tombstone=NA
+claims:sc_significantinjurydate|encoding=string|type=categorical|description=The SC_SIGNIFICANTINJURYDATE field|tombstone=NA
+claims:sc_speceffdatedepartedau|encoding=string|type=categorical|description=The SC_SPECEFFDATEDEPARTEDAU field|tombstone=NA
+claims:sc_speceffeventidentified|encoding=string|type=categorical|description=The SC_SPECEFFEVENTIDENTIFIED field|tombstone=NA
+claims:sc_speceffotherlosscause|encoding=string|type=categorical|description=The SC_SPECEFFOTHERLOSSCAUSE field|tombstone=NA
+claims:sc_specialneedscomment|encoding=long|type=categorical|description=The SC_SPECIALNEEDSCOMMENT field|tombstone=NA
+claims:sc_storm_flashfloodsource|encoding=long|type=categorical|description=The SC_STORM_FLASHFLOODSOURCE field|tombstone=NA
+claims:sc_storm_floodsource|encoding=long|type=categorical|description=The SC_STORM_FLOODSOURCE field|tombstone=NA
+claims:sc_storm_floodsourcetxt|encoding=string|type=categorical|description=The SC_STORM_FLOODSOURCETXT field|tombstone=NA
+claims:sc_storm_impacthomecontents|encoding=string|type=categorical|description=The SC_STORM_IMPACTHOMECONTENTS field|tombstone=NA
+claims:sc_storm_impactitemhealth|encoding=string|type=categorical|description=The SC_STORM_IMPACTITEMHEALTH field|tombstone=NA
+claims:sc_storm_impactitemonproperty|encoding=string|type=categorical|description=The SC_STORM_IMPACTITEMONPROPERTY field|tombstone=NA
+claims:sc_storm_impactobject|encoding=long|type=categorical|description=The SC_STORM_IMPACTOBJECT field|tombstone=NA
+claims:sc_storm_lightdamagehome|encoding=string|type=categorical|description=The SC_STORM_LIGHTDAMAGEHOME field|tombstone=NA
+claims:sc_storm_lightningstrike|encoding=long|type=categorical|description=The SC_STORM_LIGHTNINGSTRIKE field|tombstone=NA
+claims:sc_storm_lightstrikeconf|encoding=long|type=categorical|description=The SC_STORM_LIGHTSTRIKECONF field|tombstone=NA
+claims:sc_storm_windraindamagehome|encoding=long|type=categorical|description=The SC_STORM_WINDRAINDAMAGEHOME field|tombstone=NA
+claims:sc_sublosscontsintransits|encoding=long|type=categorical|description=The SC_SUBLOSSCONTSINTRANSITS field|tombstone=NA
+claims:sc_suspects|encoding=string|type=categorical|description=The SC_SUSPECTS field|tombstone=NA
+claims:sc_systemdecision|encoding=long|type=categorical|description=The SC_SYSTEMDECISION field|tombstone=NA
+claims:sc_tempaccomdetails|encoding=string|type=categorical|description=The SC_TEMPACCOMDETAILS field|tombstone=NA
+claims:sc_tempaccomenddate|encoding=string|type=categorical|description=The SC_TEMPACCOMENDDATE field|tombstone=NA
+claims:sc_tempaccomlocation|encoding=string|type=categorical|description=The SC_TEMPACCOMLOCATION field|tombstone=NA
+claims:sc_tempaccommodation|encoding=long|type=categorical|description=The SC_TEMPACCOMMODATION field|tombstone=NA
+claims:sc_tempaccomphone|encoding=string|type=categorical|description=The SC_TEMPACCOMPHONE field|tombstone=NA
+claims:sc_tempaccomstartdate|encoding=string|type=categorical|description=The SC_TEMPACCOMSTARTDATE field|tombstone=NA
+claims:sc_tenant|encoding=string|type=categorical|description=The SC_TENANT field|tombstone=NA
+claims:sc_theftarea|encoding=long|type=categorical|description=The SC_THEFTAREA field|tombstone=NA
+claims:sc_theft_carparkpersonaluse|encoding=string|type=categorical|description=The SC_THEFT_CARPARKPERSONALUSE field|tombstone=NA
+claims:sc_theft_otherdescription|encoding=string|type=categorical|description=The SC_THEFT_OTHERDESCRIPTION field|tombstone=NA
+claims:sc_tpsettleinsuredoblig|encoding=string|type=categorical|description=The SC_TPSETTLEINSUREDOBLIG field|tombstone=NA
+claims:sc_tpsettlemgmtstatus|encoding=long|type=categorical|description=The SC_TPSETTLEMGMTSTATUS field|tombstone=NA
+claims:sc_triggerassessflag|encoding=string|type=categorical|description=The SC_TRIGGERASSESSFLAG field|tombstone=NA
+claims:sc_txnsequencenumber|encoding=long|type=categorical|description=The SC_TXNSEQUENCENUMBER field|tombstone=NA
+claims:sc_typeofclaim|encoding=long|type=categorical|description=The SC_TYPEOFCLAIM field|tombstone=NA
+claims:sc_typeofdispute|encoding=long|type=categorical|description=The SC_TYPEOFDISPUTE field|tombstone=NA
+claims:sc_unapprovedliabilityeffdate|encoding=string|type=categorical|description=The SC_UNAPPROVEDLIABILITYEFFDATE field|tombstone=NA
+claims:sc_unfinisheddmg|encoding=string|type=categorical|description=The SC_UNFINISHEDDMG field|tombstone=NA
+claims:sc_unoccupancyapproved|encoding=string|type=categorical|description=The SC_UNOCCUPANCYAPPROVED field|tombstone=NA
+claims:sc_userclaimpriority|encoding=long|type=categorical|description=The SC_USERCLAIMPRIORITY field|tombstone=NA
+claims:sc_userclaimpriorityoverride|encoding=string|type=categorical|description=The SC_USERCLAIMPRIORITYOVERRIDE field|tombstone=NA
+claims:sc_utpclaim|encoding=string|type=categorical|description=The SC_UTPCLAIM field|tombstone=NA
+claims:sc_vanddamagecause|encoding=long|type=categorical|description=The SC_VANDDAMAGECAUSE field|tombstone=NA
+claims:sc_verificationstatus|encoding=long|type=categorical|description=The SC_VERIFICATIONSTATUS field|tombstone=NA
+claims:sc_vetpracticeaddress|encoding=string|type=categorical|description=The SC_VETPRACTICEADDRESS field|tombstone=NA
+claims:sc_vetpracticename|encoding=string|type=categorical|description=The SC_VETPRACTICENAME field|tombstone=NA
+claims:sc_vetpracticephone|encoding=string|type=categorical|description=The SC_VETPRACTICEPHONE field|tombstone=NA
+claims:sc_vetpracticerefno|encoding=string|type=categorical|description=The SC_VETPRACTICEREFNO field|tombstone=NA
+claims:sc_waterdamage|encoding=string|type=categorical|description=The SC_WATERDAMAGE field|tombstone=NA
+claims:sc_waterleakcause|encoding=long|type=categorical|description=The SC_WATERLEAKCAUSE field|tombstone=NA
+claims:sc_waterleakdesc|encoding=string|type=categorical|description=The SC_WATERLEAKDESC field|tombstone=NA
+claims:sc_waterleakhowlong|encoding=string|type=categorical|description=The SC_WATERLEAKHOWLONG field|tombstone=NA
+claims:sc_waterleaksource|encoding=long|type=categorical|description=The SC_WATERLEAKSOURCE field|tombstone=NA
+claims:sc_wccn|encoding=string|type=categorical|description=The SC_WCCN field|tombstone=NA
+claims:sc_wcregupdatetime|encoding=string|type=categorical|description=The SC_WCREGUPDATETIME field|tombstone=NA
+claims:sc_workcoverclaimstate|encoding=long|type=categorical|description=The SC_WORKCOVERCLAIMSTATE field|tombstone=NA
+claims:sc_workcoverclaimstatedate|encoding=string|type=categorical|description=The SC_WORKCOVERCLAIMSTATEDATE field|tombstone=NA
+claims:sc_workercommunicatondate|encoding=string|type=categorical|description=The SC_WORKERCOMMUNICATONDATE field|tombstone=NA
+claims:sc_workerduties|encoding=string|type=categorical|description=The SC_WORKERDUTIES field|tombstone=NA
+claims:sc_workplaceactivity|encoding=string|type=categorical|description=The SC_WORKPLACEACTIVITY field|tombstone=NA
+claims:sc_workplaceindustryanzsic|encoding=string|type=categorical|description=The SC_WORKPLACEINDUSTRYANZSIC field|tombstone=NA
+claims:sc_workplaceindustryasic|encoding=string|type=categorical|description=The SC_WORKPLACEINDUSTRYASIC field|tombstone=NA
+claims:sc_wpreasoncode|encoding=long|type=categorical|description=The SC_WPREASONCODE field|tombstone=NA
+claims:segment|encoding=long|type=categorical|description=The SEGMENT field|tombstone=NA
+claims:seriousinjuryflag_ext|encoding=string|type=categorical|description=The SERIOUSINJURYFLAG_EXT field|tombstone=NA
+claims:showmedicalfirstinfo|encoding=long|type=categorical|description=The SHOWMEDICALFIRSTINFO field|tombstone=NA
+claims:siescalatesiu|encoding=long|type=categorical|description=The SIESCALATESIU field|tombstone=NA
+claims:siescalatesiudate|encoding=string|type=categorical|description=The SIESCALATESIUDATE field|tombstone=NA
+claims:siscore|encoding=long|type=categorical|description=The SISCORE field|tombstone=NA
+claims:siulifecyclestate|encoding=long|type=categorical|description=The SIULIFECYCLESTATE field|tombstone=NA
+claims:siustatus|encoding=long|type=categorical|description=The SIUSTATUS field|tombstone=NA
+claims:source_system_code|encoding=string|type=categorical|description=The SOURCE_SYSTEM_CODE field|tombstone=NA
+claims:state|encoding=long|type=categorical|description=The STATE field|tombstone=NA
+claims:stateacknumber|encoding=string|type=categorical|description=The STATEACKNUMBER field|tombstone=NA
+claims:statefilenumber|encoding=string|type=categorical|description=The STATEFILENUMBER field|tombstone=NA
+claims:statutedate|encoding=string|type=categorical|description=The STATUTEDATE field|tombstone=NA
+claims:storagebarcodenum|encoding=string|type=categorical|description=The STORAGEBARCODENUM field|tombstone=NA
+claims:storageboxnum|encoding=string|type=categorical|description=The STORAGEBOXNUM field|tombstone=NA
+claims:storagecategory|encoding=long|type=categorical|description=The STORAGECATEGORY field|tombstone=NA
+claims:storagedate|encoding=string|type=categorical|description=The STORAGEDATE field|tombstone=NA
+claims:storagelocationstate|encoding=long|type=categorical|description=The STORAGELOCATIONSTATE field|tombstone=NA
+claims:storagetype|encoding=long|type=categorical|description=The STORAGETYPE field|tombstone=NA
+claims:storagevolumes|encoding=string|type=categorical|description=The STORAGEVOLUMES field|tombstone=NA
+claims:strategy|encoding=long|type=categorical|description=The STRATEGY field|tombstone=NA
+claims:subrogationstatus|encoding=long|type=categorical|description=The SUBROGATIONSTATUS field|tombstone=NA
+claims:transitionstatusdate_ext|encoding=string|type=categorical|description=The TRANSITIONSTATUSDATE_EXT field|tombstone=NA
+claims:transitionstatus_ext|encoding=long|type=categorical|description=The TRANSITIONSTATUS_EXT field|tombstone=NA
+claims:treatedpatientbfr|encoding=string|type=categorical|description=The TREATEDPATIENTBFR field|tombstone=NA
+claims:typekeyext|encoding=long|type=categorical|description=The TYPEKEYEXT field|tombstone=NA
+claims:updateuserid|encoding=long|type=categorical|description=The UPDATEUSERID field|tombstone=NA
+claims:validationlevel|encoding=long|type=categorical|description=The VALIDATIONLEVEL field|tombstone=NA
+claims:varcharext|encoding=string|type=categorical|description=The VARCHAREXT field|tombstone=NA
+claims:weather|encoding=long|type=categorical|description=The WEATHER field|tombstone=NA
+claims:weatherrelated|encoding=string|type=categorical|description=The WEATHERRELATED field|tombstone=NA
+claims:assignmentstatus_numflips_1_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:assignmentstatus_numflips_2_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:assignmentstatus_numflips_3_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:assignmentstatus_numflips_6_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:assignmentstatus_numflips_9_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:assignmentstatus_numflips_12_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:assignmentstatus_numflips_18_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:assignmentstatus_numflips_24_mth|source=claims:assignmentstatus|description=The number of times claims:assignmentstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_1_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 1 months|window=1 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_2_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 2 months|window=2 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_3_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 3 months|window=3 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_6_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 6 months|window=6 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_9_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 9 months|window=9 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_12_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 12 months|window=12 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_18_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 18 months|window=18 months|expression=num_flips
+claims:benefitsstatusdcsn_numflips_24_mth|source=claims:benefitsstatusdcsn|description=The number of times claims:benefitsstatusdcsn changed in the past 24 months|window=24 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_1_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_2_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_3_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_6_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_9_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_12_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_18_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:largelossnotificationstatus_numflips_24_mth|source=claims:largelossnotificationstatus|description=The number of times claims:largelossnotificationstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:litigationstatus_numflips_1_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:litigationstatus_numflips_2_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:litigationstatus_numflips_3_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:litigationstatus_numflips_6_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:litigationstatus_numflips_9_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:litigationstatus_numflips_12_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:litigationstatus_numflips_18_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:litigationstatus_numflips_24_mth|source=claims:litigationstatus|description=The number of times claims:litigationstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:isostatus_numflips_1_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:isostatus_numflips_2_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:isostatus_numflips_3_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:isostatus_numflips_6_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:isostatus_numflips_9_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:isostatus_numflips_12_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:isostatus_numflips_18_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:isostatus_numflips_24_mth|source=claims:isostatus|description=The number of times claims:isostatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:otherrecovstatus_numflips_1_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:otherrecovstatus_numflips_2_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:otherrecovstatus_numflips_3_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:otherrecovstatus_numflips_6_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:otherrecovstatus_numflips_9_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:otherrecovstatus_numflips_12_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:otherrecovstatus_numflips_18_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:otherrecovstatus_numflips_24_mth|source=claims:otherrecovstatus|description=The number of times claims:otherrecovstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_1_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_2_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_3_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_6_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_9_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_12_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_18_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:reinsuranceflaggedstatus_numflips_24_mth|source=claims:reinsuranceflaggedstatus|description=The number of times claims:reinsuranceflaggedstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:salvagestatus_numflips_1_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:salvagestatus_numflips_2_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:salvagestatus_numflips_3_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:salvagestatus_numflips_6_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:salvagestatus_numflips_9_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:salvagestatus_numflips_12_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:salvagestatus_numflips_18_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:salvagestatus_numflips_24_mth|source=claims:salvagestatus|description=The number of times claims:salvagestatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_dutystatus_numflips_1_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_dutystatus_numflips_2_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_dutystatus_numflips_3_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_dutystatus_numflips_6_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_dutystatus_numflips_9_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_dutystatus_numflips_12_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_dutystatus_numflips_18_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_dutystatus_numflips_24_mth|source=claims:sc_dutystatus|description=The number of times claims:sc_dutystatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_1_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_2_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_3_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_6_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_9_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_12_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_18_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_fulfilmentsystemstatus_numflips_24_mth|source=claims:sc_fulfilmentsystemstatus|description=The number of times claims:sc_fulfilmentsystemstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_idrstatus_numflips_1_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_idrstatus_numflips_2_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_idrstatus_numflips_3_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_idrstatus_numflips_6_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_idrstatus_numflips_9_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_idrstatus_numflips_12_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_idrstatus_numflips_18_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_idrstatus_numflips_24_mth|source=claims:sc_idrstatus|description=The number of times claims:sc_idrstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_importstatus_numflips_1_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_importstatus_numflips_2_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_importstatus_numflips_3_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_importstatus_numflips_6_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_importstatus_numflips_9_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_importstatus_numflips_12_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_importstatus_numflips_18_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_importstatus_numflips_24_mth|source=claims:sc_importstatus|description=The number of times claims:sc_importstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_1_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_2_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_3_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_6_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_9_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_12_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_18_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_liabilitystatus_numflips_24_mth|source=claims:sc_liabilitystatus|description=The number of times claims:sc_liabilitystatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_1_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_2_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_3_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_6_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_9_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_12_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_18_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_tpsettlemgmtstatus_numflips_24_mth|source=claims:sc_tpsettlemgmtstatus|description=The number of times claims:sc_tpsettlemgmtstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:sc_verificationstatus_numflips_1_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:sc_verificationstatus_numflips_2_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:sc_verificationstatus_numflips_3_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:sc_verificationstatus_numflips_6_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:sc_verificationstatus_numflips_9_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:sc_verificationstatus_numflips_12_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:sc_verificationstatus_numflips_18_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:sc_verificationstatus_numflips_24_mth|source=claims:sc_verificationstatus|description=The number of times claims:sc_verificationstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:siustatus_numflips_1_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:siustatus_numflips_2_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:siustatus_numflips_3_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:siustatus_numflips_6_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:siustatus_numflips_9_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:siustatus_numflips_12_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:siustatus_numflips_18_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:siustatus_numflips_24_mth|source=claims:siustatus|description=The number of times claims:siustatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:subrogationstatus_numflips_1_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 1 months|window=1 months|expression=num_flips
+claims:subrogationstatus_numflips_2_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 2 months|window=2 months|expression=num_flips
+claims:subrogationstatus_numflips_3_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 3 months|window=3 months|expression=num_flips
+claims:subrogationstatus_numflips_6_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 6 months|window=6 months|expression=num_flips
+claims:subrogationstatus_numflips_9_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 9 months|window=9 months|expression=num_flips
+claims:subrogationstatus_numflips_12_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 12 months|window=12 months|expression=num_flips
+claims:subrogationstatus_numflips_18_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 18 months|window=18 months|expression=num_flips
+claims:subrogationstatus_numflips_24_mth|source=claims:subrogationstatus|description=The number of times claims:subrogationstatus changed in the past 24 months|window=24 months|expression=num_flips
+claims:transitionstatus_ext_numflips_1_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 1 months|window=1 months|expression=num_flips
+claims:transitionstatus_ext_numflips_2_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 2 months|window=2 months|expression=num_flips
+claims:transitionstatus_ext_numflips_3_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 3 months|window=3 months|expression=num_flips
+claims:transitionstatus_ext_numflips_6_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 6 months|window=6 months|expression=num_flips
+claims:transitionstatus_ext_numflips_9_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 9 months|window=9 months|expression=num_flips
+claims:transitionstatus_ext_numflips_12_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 12 months|window=12 months|expression=num_flips
+claims:transitionstatus_ext_numflips_18_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 18 months|window=18 months|expression=num_flips
+claims:transitionstatus_ext_numflips_24_mth|source=claims:transitionstatus_ext|description=The number of times claims:transitionstatus_ext changed in the past 24 months|window=24 months|expression=num_flips
+claims:severity_type|encoding=string|type=categorical|description=The SEVERITY_TYPE field|tombstone=NA
+claims:matter_resolution_type|encoding=string|type=categorical|description=The MATTER_RESOLUTION_TYPE field|tombstone=NA
+claims:matter_type_list|encoding=string|type=categorical|description=The MATTER_TYPE_LIST field|tombstone=NA
+claims:matter_complexity|encoding=string|type=categorical|description=The MATTER_COMPLEXITY field|tombstone=NA
+claims:matter_performance|encoding=string|type=categorical|description=The MATTER_PERFORMANCE field|tombstone=NA
+claims:sc_changereason|encoding=string|type=categorical|description=The SC_CHANGEREASON field|tombstone=NA
+claims:treatment_approved_from|encoding=string|type=categorical|description=The TREATMENT_APPROVED_FROM field|tombstone=NA
+claims:treatment_approved_to|encoding=string|type=categorical|description=The TREATMENT_APPROVED_TO field|tombstone=NA
+claims:approved_treatment|encoding=string|type=categorical|description=The APPROVED_TREATMENT field|tombstone=NA
+claims:approved_treatment_subtype|encoding=string|type=categorical|description=The APPROVED_TREATMENT_SUBTYPE field|tombstone=NA
+claims:num_treatement_sessions|encoding=long|type=categorical|description=The NUM_TREATEMENT_SESSIONS field|tombstone=NA
+claims:approved_treatment_numflips_1_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 1 months|window=1 months|expression=num_flips
+claims:approved_treatment_numflips_2_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 2 months|window=2 months|expression=num_flips
+claims:approved_treatment_numflips_3_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 3 months|window=3 months|expression=num_flips
+claims:approved_treatment_numflips_6_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 6 months|window=6 months|expression=num_flips
+claims:approved_treatment_numflips_9_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 9 months|window=9 months|expression=num_flips
+claims:approved_treatment_numflips_12_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 12 months|window=12 months|expression=num_flips
+claims:approved_treatment_numflips_18_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 18 months|window=18 months|expression=num_flips
+claims:approved_treatment_numflips_24_mth|source=claims:approved_treatment|description=The number of times claims:approved_treatment changed in the past 24 months|window=24 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_1_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 1 months|window=1 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_2_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 2 months|window=2 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_3_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 3 months|window=3 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_6_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 6 months|window=6 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_9_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 9 months|window=9 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_12_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 12 months|window=12 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_18_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 18 months|window=18 months|expression=num_flips
+claims:approved_treatment_subtype_numflips_24_mth|source=claims:approved_treatment_subtype|description=The number of times claims:approved_treatment_subtype changed in the past 24 months|window=24 months|expression=num_flips
+claims:approved_treatment_count_1_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 1 months|window=1 months|expression=count
+claims:approved_treatment_count_unique_1_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 1 months|window=1 months|expression=count_unique
+claims:approved_treatment_count_2_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 2 months|window=2 months|expression=count
+claims:approved_treatment_count_unique_2_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 2 months|window=2 months|expression=count_unique
+claims:approved_treatment_count_3_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 3 months|window=3 months|expression=count
+claims:approved_treatment_count_unique_3_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 3 months|window=3 months|expression=count_unique
+claims:approved_treatment_count_6_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 6 months|window=6 months|expression=count
+claims:approved_treatment_count_unique_6_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 6 months|window=6 months|expression=count_unique
+claims:approved_treatment_count_9_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 9 months|window=9 months|expression=count
+claims:approved_treatment_count_unique_9_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 9 months|window=9 months|expression=count_unique
+claims:approved_treatment_count_12_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 12 months|window=12 months|expression=count
+claims:approved_treatment_count_unique_12_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 12 months|window=12 months|expression=count_unique
+claims:approved_treatment_count_18_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 18 months|window=18 months|expression=count
+claims:approved_treatment_count_unique_18_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 18 months|window=18 months|expression=count_unique
+claims:approved_treatment_count_24_mth|source=claims:approved_treatment|description=The count of the number of values for claims:approved_treatment in the past 24 months|window=24 months|expression=count
+claims:approved_treatment_count_unique_24_mth|source=claims:approved_treatment|description=The count of the number of unique values for claims:approved_treatment in the past 24 months|window=24 months|expression=count_unique
+claims:approved_treatment_subtype_count_1_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 1 months|window=1 months|expression=count
+claims:approved_treatment_subtype_count_unique_1_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 1 months|window=1 months|expression=count_unique
+claims:approved_treatment_subtype_count_2_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 2 months|window=2 months|expression=count
+claims:approved_treatment_subtype_count_unique_2_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 2 months|window=2 months|expression=count_unique
+claims:approved_treatment_subtype_count_3_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 3 months|window=3 months|expression=count
+claims:approved_treatment_subtype_count_unique_3_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 3 months|window=3 months|expression=count_unique
+claims:approved_treatment_subtype_count_6_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 6 months|window=6 months|expression=count
+claims:approved_treatment_subtype_count_unique_6_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 6 months|window=6 months|expression=count_unique
+claims:approved_treatment_subtype_count_9_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 9 months|window=9 months|expression=count
+claims:approved_treatment_subtype_count_unique_9_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 9 months|window=9 months|expression=count_unique
+claims:approved_treatment_subtype_count_12_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 12 months|window=12 months|expression=count
+claims:approved_treatment_subtype_count_unique_12_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 12 months|window=12 months|expression=count_unique
+claims:approved_treatment_subtype_count_18_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 18 months|window=18 months|expression=count
+claims:approved_treatment_subtype_count_unique_18_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 18 months|window=18 months|expression=count_unique
+claims:approved_treatment_subtype_count_24_mth|source=claims:approved_treatment_subtype|description=The count of the number of values for claims:approved_treatment_subtype in the past 24 months|window=24 months|expression=count
+claims:approved_treatment_subtype_count_unique_24_mth|source=claims:approved_treatment_subtype|description=The count of the number of unique values for claims:approved_treatment_subtype in the past 24 months|window=24 months|expression=count_unique
+claims:common_law_involvement|encoding=string|type=categorical|description=The COMMON_LAW_INVOLVEMENT field|tombstone=NA
+claims:common_law_outcome|encoding=string|type=categorical|description=The COMMON_LAW_OUTCOME field|tombstone=NA
+claims:lump_sum_type|encoding=string|type=categorical|description=The LUMP_SUM_TYPE field|tombstone=NA
+claims:note_type|encoding=string|type=categorical|description=The NOTE_TYPE field|tombstone=NA
+claims:note_source|encoding=string|type=categorical|description=The NOTE_SOURCE field|tombstone=NA
+claims:note_type_numflips_1_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 1 months|window=1 months|expression=num_flips
+claims:note_type_numflips_2_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 2 months|window=2 months|expression=num_flips
+claims:note_type_numflips_3_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 3 months|window=3 months|expression=num_flips
+claims:note_type_numflips_6_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 6 months|window=6 months|expression=num_flips
+claims:note_type_numflips_9_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 9 months|window=9 months|expression=num_flips
+claims:note_type_numflips_12_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 12 months|window=12 months|expression=num_flips
+claims:note_type_numflips_18_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 18 months|window=18 months|expression=num_flips
+claims:note_type_numflips_24_mth|source=claims:note_type|description=The number of times claims:note_type changed in the past 24 months|window=24 months|expression=num_flips
+claims:note_type_last_10|source=claims:note_type|description=The last 10 values|window=100 months|expression=latestN,10
+claims:note_type_count_1_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 1 months|window=1 months|expression=count
+claims:note_type_count_unique_1_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 1 months|window=1 months|expression=count_unique
+claims:note_type_count_2_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 2 months|window=2 months|expression=count
+claims:note_type_count_unique_2_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 2 months|window=2 months|expression=count_unique
+claims:note_type_count_3_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 3 months|window=3 months|expression=count
+claims:note_type_count_unique_3_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 3 months|window=3 months|expression=count_unique
+claims:note_type_count_6_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 6 months|window=6 months|expression=count
+claims:note_type_count_unique_6_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 6 months|window=6 months|expression=count_unique
+claims:note_type_count_9_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 9 months|window=9 months|expression=count
+claims:note_type_count_unique_9_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 9 months|window=9 months|expression=count_unique
+claims:note_type_count_12_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 12 months|window=12 months|expression=count
+claims:note_type_count_unique_12_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 12 months|window=12 months|expression=count_unique
+claims:note_type_count_18_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 18 months|window=18 months|expression=count
+claims:note_type_count_unique_18_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 18 months|window=18 months|expression=count_unique
+claims:note_type_count_24_mth|source=claims:note_type|description=The count of the number of values for claims:note_type in the past 24 months|window=24 months|expression=count
+claims:note_type_count_unique_24_mth|source=claims:note_type|description=The count of the number of unique values for claims:note_type in the past 24 months|window=24 months|expression=count_unique
+claims:transaction_line_status|encoding=string|type=categorical|description=The TRANSACTION_LINE_STATUS field|tombstone=NA
+claims:transaction_cost_category|encoding=string|type=categorical|description=The TRANSACTION_COST_CATEGORY field|tombstone=NA
+claims:transaction_cost_type|encoding=string|type=categorical|description=The TRANSACTION_COST_TYPE field|tombstone=NA
+claims:transaction_status|encoding=string|type=categorical|description=The TRANSACTION_STATUS field|tombstone=NA
+claims:transaction_sub_type|encoding=string|type=categorical|description=The TRANSACTION_SUB_TYPE field|tombstone=NA
+claims:transaction_amount|encoding=double|type=categorical|description=The TRANSACTION_AMOUNT field|tombstone=NA
+claims:transaction_type|encoding=string|type=categorical|description=The TRANSACTION_TYPE field|tombstone=NA
+claims:transaction_status|encoding=long|type=categorical|description=The TRANSACTION_STATUS field|tombstone=NA
+claims:transaction_type_numflips_1_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 1 months|window=1 months|expression=num_flips
+claims:transaction_type_numflips_2_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 2 months|window=2 months|expression=num_flips
+claims:transaction_type_numflips_3_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 3 months|window=3 months|expression=num_flips
+claims:transaction_type_numflips_6_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 6 months|window=6 months|expression=num_flips
+claims:transaction_type_numflips_9_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 9 months|window=9 months|expression=num_flips
+claims:transaction_type_numflips_12_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 12 months|window=12 months|expression=num_flips
+claims:transaction_type_numflips_18_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 18 months|window=18 months|expression=num_flips
+claims:transaction_type_numflips_24_mth|source=claims:transaction_type|description=The number of times claims:transaction_type changed in the past 24 months|window=24 months|expression=num_flips
+claims:transaction_sub_type_numflips_1_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 1 months|window=1 months|expression=num_flips
+claims:transaction_sub_type_numflips_2_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 2 months|window=2 months|expression=num_flips
+claims:transaction_sub_type_numflips_3_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 3 months|window=3 months|expression=num_flips
+claims:transaction_sub_type_numflips_6_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 6 months|window=6 months|expression=num_flips
+claims:transaction_sub_type_numflips_9_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 9 months|window=9 months|expression=num_flips
+claims:transaction_sub_type_numflips_12_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 12 months|window=12 months|expression=num_flips
+claims:transaction_sub_type_numflips_18_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 18 months|window=18 months|expression=num_flips
+claims:transaction_sub_type_numflips_24_mth|source=claims:transaction_sub_type|description=The number of times claims:transaction_sub_type changed in the past 24 months|window=24 months|expression=num_flips
+claims:transaction_type_last_10|source=claims:transaction_type|description=The last 10 values|window=100 months|expression=latestN,10
+claims:transaction_sub_type_last_10|source=claims:transaction_sub_type|description=The last 10 values|window=100 months|expression=latestN,10
+claims:transaction_type_count_1_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 1 months|window=1 months|expression=count
+claims:transaction_type_count_unique_1_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 1 months|window=1 months|expression=count_unique
+claims:transaction_type_count_2_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 2 months|window=2 months|expression=count
+claims:transaction_type_count_unique_2_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 2 months|window=2 months|expression=count_unique
+claims:transaction_type_count_3_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 3 months|window=3 months|expression=count
+claims:transaction_type_count_unique_3_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 3 months|window=3 months|expression=count_unique
+claims:transaction_type_count_6_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 6 months|window=6 months|expression=count
+claims:transaction_type_count_unique_6_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 6 months|window=6 months|expression=count_unique
+claims:transaction_type_count_9_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 9 months|window=9 months|expression=count
+claims:transaction_type_count_unique_9_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 9 months|window=9 months|expression=count_unique
+claims:transaction_type_count_12_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 12 months|window=12 months|expression=count
+claims:transaction_type_count_unique_12_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 12 months|window=12 months|expression=count_unique
+claims:transaction_type_count_18_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 18 months|window=18 months|expression=count
+claims:transaction_type_count_unique_18_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 18 months|window=18 months|expression=count_unique
+claims:transaction_type_count_24_mth|source=claims:transaction_type|description=The count of the number of values for claims:transaction_type in the past 24 months|window=24 months|expression=count
+claims:transaction_type_count_unique_24_mth|source=claims:transaction_type|description=The count of the number of unique values for claims:transaction_type in the past 24 months|window=24 months|expression=count_unique
+claims:transaction_sub_type_count_1_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 1 months|window=1 months|expression=count
+claims:transaction_sub_type_count_unique_1_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 1 months|window=1 months|expression=count_unique
+claims:transaction_sub_type_count_2_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 2 months|window=2 months|expression=count
+claims:transaction_sub_type_count_unique_2_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 2 months|window=2 months|expression=count_unique
+claims:transaction_sub_type_count_3_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 3 months|window=3 months|expression=count
+claims:transaction_sub_type_count_unique_3_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 3 months|window=3 months|expression=count_unique
+claims:transaction_sub_type_count_6_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 6 months|window=6 months|expression=count
+claims:transaction_sub_type_count_unique_6_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 6 months|window=6 months|expression=count_unique
+claims:transaction_sub_type_count_9_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 9 months|window=9 months|expression=count
+claims:transaction_sub_type_count_unique_9_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 9 months|window=9 months|expression=count_unique
+claims:transaction_sub_type_count_12_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 12 months|window=12 months|expression=count
+claims:transaction_sub_type_count_unique_12_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 12 months|window=12 months|expression=count_unique
+claims:transaction_sub_type_count_18_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 18 months|window=18 months|expression=count
+claims:transaction_sub_type_count_unique_18_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 18 months|window=18 months|expression=count_unique
+claims:transaction_sub_type_count_24_mth|source=claims:transaction_sub_type|description=The count of the number of values for claims:transaction_sub_type in the past 24 months|window=24 months|expression=count
+claims:transaction_sub_type_count_unique_24_mth|source=claims:transaction_sub_type|description=The count of the number of unique values for claims:transaction_sub_type in the past 24 months|window=24 months|expression=count_unique
+claims:transaction_amount_gradient_1_mth|source=claims:transaction_amount|description=The gradient over the past 1 months|window=1 months|expression=gradient
+claims:transaction_amount_sum_1_mth|source=claims:transaction_amount|description=The sum over the past 1 months|window=1 months|expression=sum
+claims:transaction_amount_max_1_mth|source=claims:transaction_amount|description=The maximum over the past 1 months|window=1 months|expression=max
+claims:transaction_amount_min_1_mth|source=claims:transaction_amount|description=The minimum over the past 1 months|window=1 months|expression=min
+claims:transaction_amount_stdev_1_mth|source=claims:transaction_amount|description=The std deviation over the past 1 months|window=1 months|expression=std_dev
+claims:transaction_amount_mean_1_mth|source=claims:transaction_amount|description=The mean over the past 1 months|window=1 months|expression=mean
+claims:transaction_amount_gradient_2_mth|source=claims:transaction_amount|description=The gradient over the past 2 months|window=2 months|expression=gradient
+claims:transaction_amount_sum_2_mth|source=claims:transaction_amount|description=The sum over the past 2 months|window=2 months|expression=sum
+claims:transaction_amount_max_2_mth|source=claims:transaction_amount|description=The maximum over the past 2 months|window=2 months|expression=max
+claims:transaction_amount_min_2_mth|source=claims:transaction_amount|description=The minimum over the past 2 months|window=2 months|expression=min
+claims:transaction_amount_stdev_2_mth|source=claims:transaction_amount|description=The std deviation over the past 2 months|window=2 months|expression=std_dev
+claims:transaction_amount_mean_2_mth|source=claims:transaction_amount|description=The mean over the past 2 months|window=2 months|expression=mean
+claims:transaction_amount_gradient_3_mth|source=claims:transaction_amount|description=The gradient over the past 3 months|window=3 months|expression=gradient
+claims:transaction_amount_sum_3_mth|source=claims:transaction_amount|description=The sum over the past 3 months|window=3 months|expression=sum
+claims:transaction_amount_max_3_mth|source=claims:transaction_amount|description=The maximum over the past 3 months|window=3 months|expression=max
+claims:transaction_amount_min_3_mth|source=claims:transaction_amount|description=The minimum over the past 3 months|window=3 months|expression=min
+claims:transaction_amount_stdev_3_mth|source=claims:transaction_amount|description=The std deviation over the past 3 months|window=3 months|expression=std_dev
+claims:transaction_amount_mean_3_mth|source=claims:transaction_amount|description=The mean over the past 3 months|window=3 months|expression=mean
+claims:transaction_amount_gradient_6_mth|source=claims:transaction_amount|description=The gradient over the past 6 months|window=6 months|expression=gradient
+claims:transaction_amount_sum_6_mth|source=claims:transaction_amount|description=The sum over the past 6 months|window=6 months|expression=sum
+claims:transaction_amount_max_6_mth|source=claims:transaction_amount|description=The maximum over the past 6 months|window=6 months|expression=max
+claims:transaction_amount_min_6_mth|source=claims:transaction_amount|description=The minimum over the past 6 months|window=6 months|expression=min
+claims:transaction_amount_stdev_6_mth|source=claims:transaction_amount|description=The std deviation over the past 6 months|window=6 months|expression=std_dev
+claims:transaction_amount_mean_6_mth|source=claims:transaction_amount|description=The mean over the past 6 months|window=6 months|expression=mean
+claims:transaction_amount_gradient_9_mth|source=claims:transaction_amount|description=The gradient over the past 9 months|window=9 months|expression=gradient
+claims:transaction_amount_sum_9_mth|source=claims:transaction_amount|description=The sum over the past 9 months|window=9 months|expression=sum
+claims:transaction_amount_max_9_mth|source=claims:transaction_amount|description=The maximum over the past 9 months|window=9 months|expression=max
+claims:transaction_amount_min_9_mth|source=claims:transaction_amount|description=The minimum over the past 9 months|window=9 months|expression=min
+claims:transaction_amount_stdev_9_mth|source=claims:transaction_amount|description=The std deviation over the past 9 months|window=9 months|expression=std_dev
+claims:transaction_amount_mean_9_mth|source=claims:transaction_amount|description=The mean over the past 9 months|window=9 months|expression=mean
+claims:transaction_amount_gradient_12_mth|source=claims:transaction_amount|description=The gradient over the past 12 months|window=12 months|expression=gradient
+claims:transaction_amount_sum_12_mth|source=claims:transaction_amount|description=The sum over the past 12 months|window=12 months|expression=sum
+claims:transaction_amount_max_12_mth|source=claims:transaction_amount|description=The maximum over the past 12 months|window=12 months|expression=max
+claims:transaction_amount_min_12_mth|source=claims:transaction_amount|description=The minimum over the past 12 months|window=12 months|expression=min
+claims:transaction_amount_stdev_12_mth|source=claims:transaction_amount|description=The std deviation over the past 12 months|window=12 months|expression=std_dev
+claims:transaction_amount_mean_12_mth|source=claims:transaction_amount|description=The mean over the past 12 months|window=12 months|expression=mean
+claims:transaction_amount_gradient_18_mth|source=claims:transaction_amount|description=The gradient over the past 18 months|window=18 months|expression=gradient
+claims:transaction_amount_sum_18_mth|source=claims:transaction_amount|description=The sum over the past 18 months|window=18 months|expression=sum
+claims:transaction_amount_max_18_mth|source=claims:transaction_amount|description=The maximum over the past 18 months|window=18 months|expression=max
+claims:transaction_amount_min_18_mth|source=claims:transaction_amount|description=The minimum over the past 18 months|window=18 months|expression=min
+claims:transaction_amount_stdev_18_mth|source=claims:transaction_amount|description=The std deviation over the past 18 months|window=18 months|expression=std_dev
+claims:transaction_amount_mean_18_mth|source=claims:transaction_amount|description=The mean over the past 18 months|window=18 months|expression=mean
+claims:transaction_amount_gradient_24_mth|source=claims:transaction_amount|description=The gradient over the past 24 months|window=24 months|expression=gradient
+claims:transaction_amount_sum_24_mth|source=claims:transaction_amount|description=The sum over the past 24 months|window=24 months|expression=sum
+claims:transaction_amount_max_24_mth|source=claims:transaction_amount|description=The maximum over the past 24 months|window=24 months|expression=max
+claims:transaction_amount_min_24_mth|source=claims:transaction_amount|description=The minimum over the past 24 months|window=24 months|expression=min
+claims:transaction_amount_stdev_24_mth|source=claims:transaction_amount|description=The std deviation over the past 24 months|window=24 months|expression=std_dev
+claims:transaction_amount_mean_24_mth|source=claims:transaction_amount|description=The mean over the past 24 months|window=24 months|expression=mean
+claims:work_capacity_status|encoding=string|type=categorical|description=The WORK_CAPACITY_STATUS field|tombstone=NA

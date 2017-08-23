@@ -1,0 +1,25 @@
+### Scala ###
+*.class
+*.log
+metastore_db
+
+# sbt specific
+.cache/
+.history/
+.lib/
+dist/*
+target
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+#idea
+*.iml
+*.ipr
+*.iws
+.idea
+out
+
+#MAC specific
+_DS_Store*

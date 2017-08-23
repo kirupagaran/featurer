@@ -1,0 +1,14 @@
+demographic:balance_numflips_1m|encoding=int|description=The customers's balance
+demographic:balance_numflips_2m|encoding=int|description=The customers's balance
+demographic:balance_numflips_4m|encoding=int|description=The customers's balance
+demographic:balance_numflips_8m|encoding=int|description=The customers's balance
+demographic:balance_numflips_12m|encoding=int|description=The customers's balance
+demographic:balance_numflips_18m|encoding=int|description=The customers's balance
+demographic:balance_numflips_24m|encoding=int|description=The customers's balance
+demographic:balance_count_1m|encoding=int|description=The customers's balance
+demographic:balance_count_2m|encoding=int|description=The customers's balance
+demographic:balance_count_4m|encoding=int|description=The customers's balance
+demographic:balance_count_8m|encoding=int|description=The customers's balance
+demographic:balance_count_12m|encoding=int|description=The customers's balance
+demographic:balance_count_18m|encoding=int|description=The customers's balance
+demographic:balance_count_24m|encoding=int|description=The customers's balance
