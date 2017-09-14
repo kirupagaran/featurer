@@ -145,8 +145,8 @@ object Chord {
 
   def generateChord(spark:SparkSession,df: DataFrame, months: Array[Int], monthCount: Int): DataFrame = {
     //val udlrObj = new UdafLr()
-    //val windowSection = Window.partitionBy("entity").orderBy("datetime").rangeBetween(-0,months(monthCount)*30*86400)
     import spark.implicits._
+    //val windowRange = Window.partitionBy("entity").orderBy($"datetime".cast("long")).rangeBetween(-0, months(monthCount) * 30 * 86400)
     if (monthCount >= 0) {
       val dt: DataFrame = monthCount match {
         case x if (monthCount >= 0) => {
