@@ -183,41 +183,72 @@ object Chord2 {
   def interFeat(spark: SparkSession, labelsDf: DataFrame, df2: DataFrame, features: Array[String], featureCnt: Int, months: Array[Int], x: Int): DataFrame = {
 
     val tempDf = labelsDf
-
     import spark.implicits._
-    val dd = labelsDf.join(
-      df2, ((df2("time") > (labelsDf("time") - (months(x) * 30 * 86400)))
-        && (df2("time") < labelsDf("time"))
+
+    val month:Int = months(x)
+
+    val dd:DataFrame = month match{
+      case month if month == months.min => {
+
+        labelsDf.join(
+          df2, (((df2("time") > (labelsDf("time") - (month * 30 * 86400)))
+            && (df2("time") < labelsDf("time")))
+            && (df2("attribute") === features(featureCnt))
+            && (labelsDf("entity") === df2("entity"))), "left"
+        )
+          .groupBy(labelsDf("time"),labelsDf("entity"))
+          .agg(
+            sum($"value").as(features(featureCnt) + "_sum_" + month),
+            first($"value").as(features(featureCnt)),
+            max($"value").as(features(featureCnt) + "_max_" + month),
+            min($"value").as(features(featureCnt) + "_min_" +month),
+            mean($"value").as(features(featureCnt) + "_mean_" + month),
+            stddev($"value").as(features(featureCnt) + "_sd_" + month),
+            sum($"value").as(features(featureCnt) + "_sum_" + month),
+            approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + month))
+          .orderBy(labelsDf("time"),labelsDf("entity"))
+      }
+      case _ =>{
+        labelsDf.join(
+          df2, (((df2("time") > (labelsDf("time") - (month * 30 * 86400)))
+            && (df2("time") < labelsDf("time")))
+            && (df2("attribute") === features(featureCnt))
+            && (labelsDf("entity") === df2("entity"))), "left"
+        )
+          .groupBy(labelsDf("time"),labelsDf("entity"))
+          .agg(
+            sum($"value").as(features(featureCnt) + "_sum_" + month),
+            max($"value").as(features(featureCnt) + "_max_" + month),
+            min($"value").as(features(featureCnt) + "_min_" + month),
+            mean($"value").as(features(featureCnt) + "_mean_" + month),
+            stddev($"value").as(features(featureCnt) + "_sd_" + month),
+            sum($"value").as(features(featureCnt) + "_sum_" + month),
+            approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + month))
+          .orderBy(labelsDf("time"),labelsDf("entity"))
+      }
+    }
+
+    /*val dd = labelsDf.join(
+      df2, (((df2("time") > (labelsDf("time") - (months(x) * 30 * 86400)))
+        && (df2("time") < labelsDf("time")))
         && (df2("attribute") === features(featureCnt))
         && (labelsDf("entity") === df2("entity"))), "left"
     )
-      .groupBy(labelsDf("time"))
+      .groupBy(labelsDf("time"),labelsDf("entity"))
       .agg(
-        sum($"value").as(features(featureCnt) + "_sum_" + months(x))/*,
+        sum($"value").as(features(featureCnt) + "_sum_" + months(x)),
+        first($"value").as(features(featureCnt) + "_last_" + months(x)),
         max($"value").as(features(featureCnt) + "_max_" + months(x)),
         min($"value").as(features(featureCnt) + "_min_" + months(x)),
         mean($"value").as(features(featureCnt) + "_mean_" + months(x)),
         stddev($"value").as(features(featureCnt) + "_sd_" + months(x)),
         sum($"value").as(features(featureCnt) + "_sum_" + months(x)),
-        approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + months(x))*/)
-      .orderBy(labelsDf("time"))
+        approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + months(x)))
+      .orderBy(labelsDf("time"),labelsDf("entity"))*/
 
-    tempDf.join(dd, "time")
-    /*dd1.join(
-      df2, ((df2("time") > (dd1("time") - (1 * 30 * 86400)))
-        && (df2("time") < dd1("time"))
-        && (df2("attribute") === features(featureCnt))
-        && (dd1("entity") === df2("entity"))), "left"
-    )
-      .groupBy(dd1("time"))
-      .agg(
-        sum($"value").as(features(featureCnt))
-      )
-      .orderBy(dd1("time"))*/
+    tempDf.join(dd, Seq("time","entity"),"inner")
 
   }
-
-
 }
 
 

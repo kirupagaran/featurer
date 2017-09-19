@@ -62,7 +62,7 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
     val factsDf: DataFrame = df.withColumn("datetime", ($"time".cast("timestamp"))).drop($"time")
       .repartition($"datetime")
       .cache()
-    val months: Array[Int] = "1".split(",").map(x => x.toInt)
+    val months: Array[Int] = "1,2,8".split(",").map(x => x.toInt)
 
 
     /*val outputDf = Chord.generateChord(spark,factsDf, months, months.length - 1)
@@ -147,7 +147,6 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
 
       val tempDf = labelsDf
 
-
       val dd = labelsDf.join(
         df2, ((df2("time") > (labelsDf("time") - (months(x) * 30 * 86400)))
           && (df2("time") < labelsDf("time"))
@@ -168,7 +167,7 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
     }
 
     val features1 = Array("balance", "age")
-    Chord2.gen(spark,labelsDf, df2, features1, months, months.length - 1).show
+    Chord2.gen(spark,labelsDf, df2, features1,months,months.length - 1).show
     //generateChord(spark,df2,labelsDf, months, months.length-1).show
 
 
