@@ -63,13 +63,15 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
       .repartition($"datetime")
       .cache()
     val months: Array[Int] = "1,2,8".split(",").map(x => x.toInt)
+    val features1 = Array("balance", "age")
+    Chord2.gen(spark, labelsDf, df2, features1, months, months.length - 1).show
+  }
 
-
-    /*val outputDf = Chord.generateChord(spark,factsDf, months, months.length - 1)
+  /*val outputDf = Chord.generateChord(spark,factsDf, months, months.length - 1)
     outputDf.foreach(println(_))
     outputDf.printSchema()*/
 
-    val features: Array[String] = featureType match {
+  /*val features: Array[String] = featureType match {
       case "categorical" => {
         dictionaryDf.filter(x => (x.toString().contains("type=categorical") || x.toString().contains("expression=num_flips") || x.toString().contains("expression=count")))
           .map(x => x.getString(0).toString.split(":")(1)).collect().sorted
@@ -164,23 +166,22 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
 
       tempDf.join(dd, "time")
 
-    }
-
-    val features1 = Array("balance", "age")
-    Chord2.gen(spark,labelsDf, df2, features1,months,months.length - 1).show
-    //generateChord(spark,df2,labelsDf, months, months.length-1).show
+    }*/
 
 
-    /*val resDf = df1.join(labelsDf, (((df1("time")-(2*30*86400)) < labelsDf("time"))&&(labelsDf("time") < df1("time"))), "left")
+  //generateChord(spark,df2,labelsDf, months, months.length-1).show
+
+
+  /*val resDf = df1.join(labelsDf, (((df1("time")-(2*30*86400)) < labelsDf("time"))&&(labelsDf("time") < df1("time"))), "left")
       .groupBy(from_unixtime(df1("time")),labelsDf("entity"),labelsDf("attribute"))
         .agg(mean($"value"),max($"value"),min($"value"),stddev($"value").as("sd"+"_2"),count($"value"),approxCountDistinct($"value",0.01))*/
 
-    /*val aggregatedRdd: RDD[Row] = resDf.rdd.groupBy(r => r.getAs[String]("attribute"))
+  /*val aggregatedRdd: RDD[Row] = resDf.rdd.groupBy(r => r.getAs[String]("attribute"))
       .map(row =>
       // Mapping the Grouped Values to a new Row Object
       Row(row._2)
     )
-    aggregatedRdd.foreach(println(_))*/
+    aggregatedRdd.foreach(println(_))
 
 
     //Convert chord rdd to chord dataframe
@@ -244,4 +245,5 @@ class ChordTests extends FlatSpec with Matchers with BeforeAndAfterAll {
     lrObj.getSlope.toString shouldEqual ("0.055757087196023104")
   }*/
 }
-
+*/
+}

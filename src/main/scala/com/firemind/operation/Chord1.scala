@@ -21,7 +21,7 @@ import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.util.{Failure, Success, Try}
 
 /**
-  * Created by u391095(Kirupa Devarajan) on 05/08/2016.
+  * Created by Kirupa Devarajan
   * Creates a single dataframe and uses statistics output to filter the sparse features in the dataframe
   *
   * Sample Execution Command
@@ -33,11 +33,11 @@ import scala.util.{Failure, Success, Try}
   * --executor-cores 4 \
   * --executor-memory 23g \
   * ivory-spark-assembly-1.0-SNAPSHOT.jar \
-  * --project-path "s3://w-001057-data/users/kirupa/filter_continuous" \
+  * --project-path "s3://path" \
   * --feature-type "categorical" \
   * --null-replacement "NA" \
-  * --facts-path "s3://w-001057-data/users/dariush_riazati/fraud_dui_without_ivory_2/eavt/DuiInsDriver" \
-  * --dictionary-path "s3://w-001057-data/users/dariush_riazati/fraud_dui_without_ivory_2/dictionary/dictionary.psv/part-00000-d6b9a702-16a4-46f4-9468-d40b258e90cc.csv" \
+  * --facts-path "s3://path" \
+  * --dictionary-path "s3://path" \
   * --output-path "/tmp/ivory-spark" \
   * --months "1,2"
   */

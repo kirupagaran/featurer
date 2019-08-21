@@ -27,9 +27,14 @@ import org.apache.spark.sql.functions._
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
 
+import org.apache.spark.sql.expressions.MutableAggregationBuffer
+import org.apache.spark.sql.expressions.UserDefinedAggregateFunction
+import org.apache.spark.sql.Row
+import org.apache.spark.sql.types._
+
 /**
-  * Created by u391095(Kirupa Devarajan) on 05/08/2016.
-  * Creates a single dataframe and uses statistics output to filter the sparse features in the dataframe
+  *
+  * Created by Kirupa Devarajan
   *
   * Sample Execution Command
   *
@@ -40,11 +45,11 @@ import java.util.{Calendar, Date}
   * --executor-cores 4 \
   * --executor-memory 23g \
   * ivory-spark-assembly-1.0-SNAPSHOT.jar \
-  * --project-path "s3://w-001057-data/users/kirupa/filter_continuous" \
+  * --project-path "s3://path" \
   * --feature-type "categorical" \
   * --null-replacement "NA" \
-  * --facts-path "s3://w-001057-data/users/dariush_riazati/fraud_dui_without_ivory_2/eavt/DuiInsDriver" \
-  * --dictionary-path "s3://w-001057-data/users/dariush_riazati/fraud_dui_without_ivory_2/dictionary/dictionary.psv/part-00000-d6b9a702-16a4-46f4-9468-d40b258e90cc.csv" \
+  * --facts-path "s3://path" \
+  * --dictionary-path "s3://path" \
   * --output-path "/tmp/ivory-spark" \
   * --months "1,2"
   */
@@ -121,7 +126,7 @@ object Chord2 {
     //.withColumn("time",unix_timestamp($"time", "yyyy-MM-dd"))
     val df2 = spark.read.option("header", "true").option("delimiter", "|").csv("")
       .withColumn("time", unix_timestamp($"time", "yyyy-MM-dd"))
-    val dictionaryDf = spark.read.option("delimiter", "|").csv("")
+    val dictionaryDf = spark.read.option("delimiter", "|").csv(dictionaryPath)
     val getTime = udf { x: String => x.split(":")(1) }
     val getEntity = udf { x: String => x.split(":")(0) }
     val labelsDf = df1.withColumn("rawtime", getTime($"id")).withColumn("entity", getEntity($"id")).withColumn("time", unix_timestamp($"rawtime", "yyyy-MM-dd")).drop("rawtime")
@@ -184,6 +189,7 @@ object Chord2 {
 
     val tempDf = labelsDf
     import spark.implicits._
+    val lr = new LrUdaf()
 
     val month:Int = months(x)
 
@@ -204,7 +210,8 @@ object Chord2 {
             min($"value").as(features(featureCnt) + "_min_" +month),
             mean($"value").as(features(featureCnt) + "_mean_" + month),
             stddev($"value").as(features(featureCnt) + "_sd_" + month),
-            sum($"value").as(features(featureCnt) + "_sum_" + month),
+            lr($"value").as(features(featureCnt) + "_lr_" + month),
+            sum($"value").as(features(featureCnt) + "_gradient_" + month),
             approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + month))
           .orderBy(labelsDf("time"),labelsDf("entity"))
       }
@@ -250,5 +257,6 @@ object Chord2 {
 
   }
 }
+
 
 

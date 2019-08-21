@@ -3,7 +3,7 @@ package com.firemind.operation
 import org.apache.commons.math3.stat.regression.SimpleRegression
 
 /**
-  * Created by u391005 on 31/07/2017.
+  * Created by kirupa on 31/07/2017.
   * Returns Linear Regression Object which has slope, intercept and regression related data
   */
 class LinearRegression {
