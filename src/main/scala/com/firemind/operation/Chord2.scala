@@ -21,7 +21,6 @@ import scala.util.{Failure, Success, Try}
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import org.apache.spark.sql._
-import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import org.apache.spark.sql.types.{DateType, StringType, StructField, StructType}
 import org.apache.spark.sql.functions._
 import java.text.SimpleDateFormat
