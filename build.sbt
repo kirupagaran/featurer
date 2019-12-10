@@ -1,6 +1,6 @@
 name := "Featurer"
 
-organization := "com.firemind"
+organization := "com.firemindlabs"
 
 version := "1.0-SNAPSHOT"
 
@@ -12,10 +12,13 @@ libraryDependencies += "org.apache.spark" %% "spark-mllib" % "2.4.3" % "provided
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 
-libraryDependencies += "com.github.scopt" %% "scopt" % "3.5.0"
+// https://mvnrepository.com/artifact/com.github.scopt/scopt
+libraryDependencies += "com.github.scopt" %% "scopt" % "3.6.0"
+libraryDependencies += "org.yaml" % "snakeyaml" % "1.24"
 
 
-scalacOptions in Test ++= Seq("-Yrangepos")
+
+
 
 parallelExecution in Test := false
 

@@ -1,4 +1,4 @@
-package com.firemind.operation
+package com.firemindlabs.operation
 
 import org.apache.commons.math3.stat.regression.SimpleRegression
 

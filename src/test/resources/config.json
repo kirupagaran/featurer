@@ -1,0 +1,11 @@
+{
+  "static-features": "age:int,balance:string",
+  "force-categorical": "null",
+  "dynamic-features": "sum,min,max,stddev",
+  "window": "1,2",
+  "labels-path": "",
+  "eavt-path": "",
+  "null-replacement": "",
+  "output-path": "",
+  "config-path": ""
+}

@@ -1,4 +1,4 @@
-package com.firemind.operation
+package com.firemindlabs.operation
 import org.apache.spark.sql.expressions.MutableAggregationBuffer
 import org.apache.spark.sql.expressions.UserDefinedAggregateFunction
 import org.apache.spark.sql.Row
