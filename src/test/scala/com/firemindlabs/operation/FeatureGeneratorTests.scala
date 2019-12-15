@@ -38,12 +38,12 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
   //spark implicits are required for all dollar usage in ($"column_name")
   import spark.implicits._
 
-  /*"Preprocessing of data " should " be done successfully" in {
+  "Preprocessing of data " should " be done successfully" in {
     val args: Array[String] = Array(
       "--config-path",
       getClass.getResource("/config.json").getPath,
       "--static-features",
-      "age:int,balance:string",
+      "status:int,balance:string",
       "--force-categorical",
       "null",
       "--dynamic-features",
@@ -53,32 +53,34 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
       "--eavt-path",
       getClass.getResource("/eavt_test.csv").getPath,
       "--window",
-      "1,2",
+      "1,2,6,18",
       "--null-replacement",
       "null",
       "--output-path",
       "/tmp"
     )
     FeatureGenerator.start(args)
-    val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
-    val labels = spark.read.option("header", "true").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
+    /*val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
+    val labels = spark.read.option("header", "false").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
     FeatureGenerator.preprocess(spark, data, labels)(0).printSchema()
     FeatureGenerator.preprocess(spark, data, labels)(1).printSchema()
 
     ConfigParser.parse_json_config(getClass.getResource("/config.json").getPath)
-      .foreach(configSet => println(configSet._1 + " => " + configSet._2))
-  }*/
+      .foreach(configSet => println(configSet._1 + " => " + configSet._2))*/
+  }
 
-  "Categorical data " should " be loaded ivory-spark should create dynamic features" in {
+ /* "Categorical data " should " be loaded ivory-spark should create dynamic staticFeatures" in {
     val featureType = "categorical"
 
     val dictionaryDf = spark.read.option("delimiter", "|").csv(getClass.getResource("/dictionary_" + featureType + ".csv").getPath)
     dictionaryDf.show()
 
     val months: Array[Int] = "1,2".split(",").map(x => x.toInt)
-    val features1 = Array("age", "balance")
+    val features1 = Map("age"->"continuous","balance"->"continuous" )
     val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
-    val labels = spark.read.option("header", "true").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
+    val labels = spark.read.option("header", "false").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
+
+
     FeatureGenerator.preprocess(spark,data,labels)
     FeatureGenerator.generate(
       spark,
@@ -89,12 +91,12 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
       months.length - 1
     ).show(false)
   }
-
+*/
   /*val outputDf = Chord.generateChord(spark,factsDf, months, months.length - 1)
     outputDf.foreach(println(_))
     outputDf.printSchema()*/
 
-  /*val features: Array[String] = featureType match {
+  /*val staticFeatures: Array[String] = featureType match {
       case "categorical" => {
         dictionaryDf.filter(x => (x.toString().contains("type=categorical") || x.toString().contains("expression=num_flips") || x.toString().contains("expression=count")))
           .map(x => x.getString(0).toString.split(":")(1)).collect().sorted
@@ -135,11 +137,11 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
 
 
 
-    def generate(labeldf: DataFrame, eavtDf: DataFrame, features: Array[String], months: Array[Int], monthscnt: Int): DataFrame = {
+    def generate(labeldf: DataFrame, eavtDf: DataFrame, staticFeatures: Array[String], months: Array[Int], monthscnt: Int): DataFrame = {
       if (monthscnt >= 0) {
         val dtt: DataFrame = monthscnt match {
           case x if (monthscnt >= 0) => {
-            val ddd = generate(level_1_recursion(labeldf, eavtDf, features, months, monthscnt), eavtDf, features, months, monthscnt - 1)
+            val ddd = generate(level_1_recursion(labeldf, eavtDf, staticFeatures, months, monthscnt), eavtDf, staticFeatures, months, monthscnt - 1)
             ddd
           }
         }
@@ -150,15 +152,15 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
     }
 
 
-    def level_1_recursion(labelsDf: DataFrame, df2: DataFrame, features: Array[String], months: Array[Int], x: Int): DataFrame = {
-      level_2_recursion(labelsDf, df2, features, features.length - 1, months, x)
+    def level_1_recursion(labelsDf: DataFrame, df2: DataFrame, staticFeatures: Array[String], months: Array[Int], x: Int): DataFrame = {
+      level_2_recursion(labelsDf, df2, staticFeatures, staticFeatures.length - 1, months, x)
     }
 
-    def level_2_recursion(labeldf: DataFrame, eavtDf: DataFrame, features: Array[String], featuresCnt: Int, months: Array[Int], monthscnt: Int): DataFrame = {
+    def level_2_recursion(labeldf: DataFrame, eavtDf: DataFrame, staticFeatures: Array[String], featuresCnt: Int, months: Array[Int], monthscnt: Int): DataFrame = {
       if (featuresCnt >= 0) {
         val dtt: DataFrame = featuresCnt match {
           case x if (featuresCnt >= 0) => {
-            val ddd = level_2_recursion(level_3_recursion(labeldf, eavtDf, features, featuresCnt, months, monthscnt), eavtDf, features, featuresCnt - 1, months, monthscnt)
+            val ddd = level_2_recursion(level_3_recursion(labeldf, eavtDf, staticFeatures, featuresCnt, months, monthscnt), eavtDf, staticFeatures, featuresCnt - 1, months, monthscnt)
             ddd
           }
         }
@@ -168,23 +170,23 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
         labeldf
     }
 
-    def level_3_recursion(labelsDf: DataFrame, df2: DataFrame, features: Array[String], featureCnt: Int, months: Array[Int], x: Int): DataFrame = {
+    def level_3_recursion(labelsDf: DataFrame, df2: DataFrame, staticFeatures: Array[String], featureCnt: Int, months: Array[Int], x: Int): DataFrame = {
 
       val tempDf = labelsDf
 
       val dd = labelsDf.join(
         df2, ((df2("time") > (labelsDf("time") - (months(x) * 30 * 86400)))
           && (df2("time") < labelsDf("time"))
-          && (df2("attribute") === features(featureCnt))
+          && (df2("attribute") === staticFeatures(featureCnt))
           && (labelsDf("entity") === df2("entity"))), "left"
       )
         .groupBy(labelsDf("time"))
-        .agg(max($"value").as(features(featureCnt) + "_max_" + months(x)),
-          min($"value").as(features(featureCnt) + "_min_" + months(x)),
-          mean($"value").as(features(featureCnt) + "_mean_" + months(x)),
-          stddev($"value").as(features(featureCnt) + "_sd_" + months(x)),
-          count($"value").as(features(featureCnt) + "_numflips_" + months(x)),
-          approxCountDistinct($"value", 0.01).as(features(featureCnt) + "_count_" + months(x)))
+        .agg(max($"value").as(staticFeatures(featureCnt) + "_max_" + months(x)),
+          min($"value").as(staticFeatures(featureCnt) + "_min_" + months(x)),
+          mean($"value").as(staticFeatures(featureCnt) + "_mean_" + months(x)),
+          stddev($"value").as(staticFeatures(featureCnt) + "_sd_" + months(x)),
+          count($"value").as(staticFeatures(featureCnt) + "_numflips_" + months(x)),
+          approxCountDistinct($"value", 0.01).as(staticFeatures(featureCnt) + "_count_" + months(x)))
         .orderBy(labelsDf("time"))
 
       tempDf.join(dd, "time")
@@ -209,7 +211,7 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
 
     //Convert chord rdd to chord dataframe
     var chordDfSchema = Array[String]()
-    chordDfSchema = "ID" +: features
+    chordDfSchema = "ID" +: staticFeatures
     val fields = chordDfSchema.map(fieldName => StructField(fieldName, StringType))
     val schema = StructType(fields)
     //val chordDf = spark.createDataFrame(chordRdd, schema)
@@ -241,7 +243,7 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
     //Chord.generateCatgChord(spark, factsDf, dictionaryDf, months, featureType).show
   }
 
-  /*"Continuous data " should " be loaded ivory-spark should create dynamic features" in {
+  /*"Continuous data " should " be loaded ivory-spark should create dynamic staticFeatures" in {
     val featureType = "continuous"
     val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_" + featureType + ".csv").getPath)
     val dictionaryDf = spark.read.option("delimiter", "|").csv(getClass.getResource("/dictionary_" + featureType + ".csv").getPath)

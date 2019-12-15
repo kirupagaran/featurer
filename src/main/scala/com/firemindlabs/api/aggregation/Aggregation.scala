@@ -10,14 +10,16 @@ import scala.collection.mutable.ListBuffer
   * Created by kirupa on 05/12/19.
   */
 class Aggregation {
-  def aggregated_columns(spark: SparkSession, labelsDf: DataFrame, data: DataFrame, features: Array[String], featureCnt: Int, month: Int): DataFrame = {
-    val aggs = Array("skew")
+  def aggregated_columns(spark: SparkSession, labelsDf: DataFrame, data: DataFrame, staticFeatures: Map[String,String], featureCnt: Int,dynamicFeatures:Array[String], month: Int): DataFrame = {
+
+
     var aggFuncs:Seq[Column] = Seq(sum(data("value")))
     var aggsf = new ListBuffer[Column]()
 
-    val allFeatures = Map("age"->"continuous","balance"->"continuous" )
+    val allFeatures = staticFeatures
+    val features = staticFeatures.keys.toArray
 
-    aggs.map {
+    dynamicFeatures.map {
       x => x match {
         // ONLY CONTINUOUS FEATURES
         case "min" => {
@@ -88,7 +90,7 @@ class Aggregation {
 
         /*case "slope" => {
           val lr = new LrUdaf()
-          aggsf += lr.(data("value")).as(features(featureCnt) + "_first_" + month)
+          aggsf += lr.(data("value")).as(staticFeatures(featureCnt) + "_first_" + month)
         }*/
         case _ => {
           aggsf.map(x => println(x))

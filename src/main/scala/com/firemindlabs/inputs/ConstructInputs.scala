@@ -17,28 +17,6 @@ class ConstructInputs {
   var outputPath: String = ""
   var window: String = ""
   var configPath: String = ""
-
-
-
-  /*def validate(configPath:String,cmdLineArgs:Option[FeatureGenerator.Config]): Unit ={
-
-    println("\nFollowing are the parameters configured...\n")
-    println("............................................\n")
-    if (configPath != "") {
-      ConfigParser.parse_json_config(configPath)
-        .foreach(configSet => println(configSet._1 + "=>" + configSet._2))
-    }
-    else{
-      cmdLineArgs match {
-        case Some(config) => {
-          if (config.labelsPath == "" || config.eavtPath == ""){
-
-          }
-        }
-      }
-    }
-    println("\n.........\n")
-  }*/
 }
 
 object ConstructInputs{
@@ -77,13 +55,13 @@ object ConstructInputs{
 
       opt[String]('s', "static-features") action {
         (x, c) => c.copy(staticFeatures = x)
-      } text "Comma seperate list of static features with their respective datatypes. Eg. \"age:int,gender:string\". Check documentation for the list of allowed datatypes"
+      } text "Comma seperate list of static staticFeatures with their respective datatypes. Eg. \"age:int,gender:string\". Check documentation for the list of allowed datatypes"
       opt[String]('f', "force-categorical") action {
         (x, c) => c.copy(forceCategorical = x)
-      } text "Comma seperated List of continuous features to be considered as categorical features."
+      } text "Comma seperated List of continuous staticFeatures to be considered as categorical staticFeatures."
       opt[String]('d', "dynamic-features") action { (x, c) =>
         c.copy(dynamicFeatures = x)
-      } text "Comma seperated list of dynamic features to be generated."
+      } text "Comma seperated list of dynamic staticFeatures to be generated."
       opt[String]('l', "labels-path") action {
         (x, c) => c.copy(labelsPath = x)
       } text "Path to the labels file"

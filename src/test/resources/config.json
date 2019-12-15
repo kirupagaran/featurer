@@ -1,7 +1,7 @@
 {
   "static-features": "age:int,balance:string",
   "force-categorical": "null",
-  "dynamic-features": "sum,min,max,stddev",
+  "dynamic-features": "min,max",
   "window": "1,2",
   "labels-path": "",
   "eavt-path": "",
