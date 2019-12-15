@@ -7,7 +7,7 @@ import org.apache.log4j.Level
 import org.apache.spark.sql._
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import org.apache.spark.sql.types.{DateType, StringType, StructField, StructType}
-import com.firemindlabs.inputs.ConfigParser
+import com.firemindlabs.inputs.{ConfigParser, ConstructInputs}
 import org.apache.spark.sql.functions._
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
@@ -38,12 +38,12 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
   //spark implicits are required for all dollar usage in ($"column_name")
   import spark.implicits._
 
-  "Preprocessing of data " should " be done successfully" in {
+  "Commandline arguments " should "override config file and parsed successfully" in {
     val args: Array[String] = Array(
       "--config-path",
       getClass.getResource("/config.json").getPath,
       "--static-features",
-      "status:int,balance:string",
+      "status:int,balance:int",
       "--force-categorical",
       "null",
       "--dynamic-features",
@@ -59,39 +59,80 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
       "--output-path",
       "/tmp"
     )
+    val input: ConstructInputs = ConstructInputs(args)
+    input.staticFeatures should be("status:int,balance:int")
+    input.dynamicFeatures should be("sum,min,max,stddev")
+  }
+
+
+  "Config file" should " be parsed successfully" in {
+    val args: Array[String] = Array(
+      "--config-path",
+      getClass.getResource("/config_test.json").getPath
+    )
+    val input: ConstructInputs = ConstructInputs(args)
+    input.staticFeatures should be("balance:int")
+    input.dynamicFeatures should be("stddev,max")
+    input.eavtPath should be("firemindlabs/firemind/featurer/src/test/resources/eavt_test.csv")
+    input.labelsPath should be("firemindlabs/firemind/featurer/src/test/resources/label_test.csv")
+    input.forceCategorical should be("balance")
+    input.nullReplacement should be("NA")
+    input.window should be("1,4,6")
+    input.outputPath should be("/tmp/test")
+
+  }
+
+  "Dynamic Features" should "be generated successfully" in {
+    val args: Array[String] = Array(
+      "--config-path",
+      getClass.getResource("/config.json").getPath,
+      "--static-features",
+      "status:int,balance:int",
+      "--force-categorical",
+      "null",
+      "--dynamic-features",
+      "sum,min,max,stddev",
+      "--labels-path",
+      getClass.getResource("/label_test.csv").getPath,
+      "--eavt-path",
+      getClass.getResource("/eavt_test.csv").getPath,
+      "--window",
+      "1,2,6,18",
+      "--null-replacement",
+      "null",
+      "--output-path",
+      "/tmp"
+    )
+    val input: ConstructInputs = ConstructInputs(args)
+    input.staticFeatures should be("status:int,balance:int")
+    input.dynamicFeatures should be("sum,min,max,stddev")
+
     FeatureGenerator.start(args)
-    /*val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
-    val labels = spark.read.option("header", "false").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
-    FeatureGenerator.preprocess(spark, data, labels)(0).printSchema()
-    FeatureGenerator.preprocess(spark, data, labels)(1).printSchema()
-
-    ConfigParser.parse_json_config(getClass.getResource("/config.json").getPath)
-      .foreach(configSet => println(configSet._1 + " => " + configSet._2))*/
   }
 
- /* "Categorical data " should " be loaded ivory-spark should create dynamic staticFeatures" in {
-    val featureType = "categorical"
+  /* "Categorical data " should " be loaded ivory-spark should create dynamic staticFeatures" in {
+     val featureType = "categorical"
 
-    val dictionaryDf = spark.read.option("delimiter", "|").csv(getClass.getResource("/dictionary_" + featureType + ".csv").getPath)
-    dictionaryDf.show()
+     val dictionaryDf = spark.read.option("delimiter", "|").csv(getClass.getResource("/dictionary_" + featureType + ".csv").getPath)
+     dictionaryDf.show()
 
-    val months: Array[Int] = "1,2".split(",").map(x => x.toInt)
-    val features1 = Map("age"->"continuous","balance"->"continuous" )
-    val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
-    val labels = spark.read.option("header", "false").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
+     val months: Array[Int] = "1,2".split(",").map(x => x.toInt)
+     val features1 = Map("age"->"continuous","balance"->"continuous" )
+     val data = spark.read.option("delimiter", "|").option("inferSchema", false).csv(getClass.getResource("/eavt_test.csv").getPath)
+     val labels = spark.read.option("header", "false").option("delimiter", "|").csv(getClass.getResource("/label_test.csv").getPath)
 
 
-    FeatureGenerator.preprocess(spark,data,labels)
-    FeatureGenerator.generate(
-      spark,
-      FeatureGenerator.preprocess(spark,data,labels)(0),
-      FeatureGenerator.preprocess(spark,data,labels)(1),
-      features1,
-      months,
-      months.length - 1
-    ).show(false)
-  }
-*/
+     FeatureGenerator.preprocess(spark,data,labels)
+     FeatureGenerator.generate(
+       spark,
+       FeatureGenerator.preprocess(spark,data,labels)(0),
+       FeatureGenerator.preprocess(spark,data,labels)(1),
+       features1,
+       months,
+       months.length - 1
+     ).show(false)
+   }
+ */
   /*val outputDf = Chord.generateChord(spark,factsDf, months, months.length - 1)
     outputDf.foreach(println(_))
     outputDf.printSchema()*/

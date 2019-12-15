@@ -65,17 +65,19 @@ object FeatureGenerator {
 
     val input: ConstructInputs = ConstructInputs(args)
 
-    println("\nFollowing are the parameters configured...\n")
+    println("\nRaw parameters received...")
     println("............................................\n")
     args.foreach(println(_))
-    //args.foreach(println(_))
+    println("\n.........\n")
+    println("\nAfter Parsing parameters succesfully...")
+    println("............................................\n")
     input.getClass.getDeclaredFields.foreach(x => {
       x.setAccessible(true)
       println(x.getName() + " => " + x.get(input))
     })
     println("\n.........\n")
 
-    val str = "age:int,balance:string"
+
     val staticFeatures: Map[String, String] = input.staticFeatures.toString.split(",").map(x => x.toString.split(":")(1).toLowerCase match {
       case "string" => {
         (x.toString.split(":")(0), "categorical")
@@ -130,9 +132,11 @@ object FeatureGenerator {
       .add("time", "Long")
     val dataRdd = data.rdd
     val dataWithTimestamp: DataFrame = spark.createDataFrame(dataRdd, factsSchema)
+
+    println("\nSample EAVT with timestamp in seconds...")
+    println("............................................\n")
     dataWithTimestamp.show()
     //val dataWithTimestamp: DataFrame = df.withColumn("datetime", ($"time".cast("timestamp"))).drop($"time")
-
     //Labels (convert date and time to timestamp)
     val getTime = udf { x: String => x.split(":")(1) }
     val getEntity = udf { x: String => x.split(":")(0) }

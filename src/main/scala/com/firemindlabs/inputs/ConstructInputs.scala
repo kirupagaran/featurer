@@ -1,4 +1,5 @@
 package com.firemindlabs.inputs
+
 import com.firemindlabs.operation.FeatureGenerator
 
 import scopt.OptionParser
@@ -19,8 +20,8 @@ class ConstructInputs {
   var configPath: String = ""
 }
 
-object ConstructInputs{
-  def apply(args:Array[String]): ConstructInputs={
+object ConstructInputs {
+  def apply(args: Array[String]): ConstructInputs = {
     type T = String
     type T1 = String
 
@@ -95,9 +96,9 @@ object ConstructInputs{
           constructInputObj.nullReplacement = configParams("null-replacement").toString
           constructInputObj.outputPath = configParams("output-path").toString
           constructInputObj.window = configParams("window").toString
-          constructInputObj.configPath = configParams("config-path").toString
 
         }
+
         if (config.staticFeatures != "")
           constructInputObj.staticFeatures = config.staticFeatures
         if (config.forceCategorical != "")
