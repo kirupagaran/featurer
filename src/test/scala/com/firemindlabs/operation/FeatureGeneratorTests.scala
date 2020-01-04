@@ -57,7 +57,7 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
       "--null-replacement",
       "null",
       "--output-path",
-      "/tmp"
+      " /tmp/featurer-output"
     )
     val input: ConstructInputs = ConstructInputs(args)
     input.staticFeatures should be("status:int,balance:int")
@@ -78,7 +78,7 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
     input.forceCategorical should be("balance")
     input.nullReplacement should be("NA")
     input.window should be("1,4,6")
-    input.outputPath should be("/tmp/test")
+    input.outputPath should be("/tmp/featurer-output")
 
   }
 
@@ -99,7 +99,7 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
       "--null-replacement",
       "null",
       "--output-path",
-      "/tmp"
+      "/tmp/featurer-output"
     )
     val input: ConstructInputs = ConstructInputs(args)
     input.staticFeatures should be("status:int,balance:int")

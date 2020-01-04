@@ -6,5 +6,5 @@
   "labels-path": "firemindlabs/firemind/featurer/src/test/resources/label_test.csv",
   "eavt-path": "firemindlabs/firemind/featurer/src/test/resources/eavt_test.csv",
   "null-replacement": "",
-  "output-path": ""
+  "output-path": "/tmp/featurer-output"
 }

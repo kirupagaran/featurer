@@ -99,7 +99,11 @@ object FeatureGenerator {
 
     val processedData = preprocess(spark, eavtDf, labelsDf)
 
-    generate(spark, processedData(0), processedData(1), staticFeatures, input.dynamicFeatures.split(","), timeWindow, timeWindow.length - 1).show()
+    val outputDf = generate(spark, processedData(0), processedData(1), staticFeatures, input.dynamicFeatures.split(","), timeWindow, timeWindow.length - 1)
+    println("OUTPUT SAMPLE")
+    println("+++++++++++++++")
+    outputDf.show()
+    outputDf.write.mode("overwrite").parquet(input.outputPath)
     spark.stop()
   }
 
