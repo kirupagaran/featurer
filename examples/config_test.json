@@ -1,0 +1,10 @@
+{
+  "static-features": "balance:int",
+  "force-categorical": "balance",
+  "dynamic-features": "stddev,max",
+  "window": "1,4,6",
+  "labels-path": "/tmp/examples/label_test.csv",
+  "eavt-path": "/tmp/examples/eavt_test.csv",
+  "null-replacement": "NA",
+  "output-path": "/tmp/test"
+}

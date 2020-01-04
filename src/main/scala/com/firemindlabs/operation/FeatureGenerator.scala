@@ -37,21 +37,17 @@ import scala.io.Source
   * Sample Execution Command
   *
   * spark-submit \
-  * --class com.firemindlabs.operation.FeatureGenerator \
-  * --master yarn \
-  * --driver-memory 8g \
-  * --executor-cores 4 \
-  * --executor-memory 23g \
-  * Featurer-assembly-1.0-SNAPSHOT.jar \
-  * --config-file "s3://path" \
-  * --static-features "categorical" \
-  * --force-categorical "NA" \
-  * --dynamic-staticFeatures "s3://path" \
-  * --labels-path "s3://path" \
-  * --eavt-path "/tmp/ivory-spark" \
-  * --window "1,2" \
-  * --null-replacement "" \
-  * --output-path ""
+      --class com.firemindlabs.operation.FeatureGenerator \
+      --master local \
+      file:///tmp/examples/Featurer-assembly-1.0-SNAPSHOT.jar \
+      --static-features "status:int,balance:int" \
+      --force-categorical "null" \
+      --dynamic-features "sum,min,max,stddev" \
+      --labels-path "/tmp/examples/label_test.csv" \
+      --eavt-path "/tmp/examples/eavt_test.csv" \
+      --window "1,2," \
+      --null-replacement "null" \
+      --output-path "/tmp/featurer-output"
   */
 object FeatureGenerator {
 

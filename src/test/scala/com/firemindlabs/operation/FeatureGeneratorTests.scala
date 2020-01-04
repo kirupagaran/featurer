@@ -84,8 +84,6 @@ class FeatureGeneratorTests extends FlatSpec with Matchers with BeforeAndAfterAl
 
   "Dynamic Features" should "be generated successfully" in {
     val args: Array[String] = Array(
-      "--config-path",
-      getClass.getResource("/config.json").getPath,
       "--static-features",
       "status:int,balance:int",
       "--force-categorical",

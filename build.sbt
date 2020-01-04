@@ -16,10 +16,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.6.0"
 libraryDependencies += "org.yaml" % "snakeyaml" % "1.24"
 
-
-
-
-
 parallelExecution in Test := false
 
 publishMavenStyle := true
