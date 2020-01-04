@@ -10,7 +10,7 @@
     file:///tmp/examples/Featurer-assembly-1.0-SNAPSHOT.jar \
     --config-path "/tmp/examples/config_test.json"
     
-### Using Parameters directly using commandline
+### Using Parameters directly via commandline
 ##### Alternatively you can run the application by passing the parameters directly in the commandline as shown below;
 ###
     spark-submit \
