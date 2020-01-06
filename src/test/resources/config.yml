@@ -1,0 +1,6 @@
+config:
+  - static-staticFeatures: "age:int,balance:string"
+  - force-categorical: ""
+  - dynamic-staticFeatures: "sum,min,max,stddev"
+  # time-interval in days
+  - window: "30,60,90,180,360,720"

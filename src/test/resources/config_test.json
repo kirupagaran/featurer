@@ -1,0 +1,10 @@
+{
+  "static-features": "balance:int",
+  "force-categorical": "balance",
+  "dynamic-features": "stddev,max",
+  "window": "1,4,6",
+  "labels-path": "firemindlabs/firemind/featurer/src/test/resources/label_test.csv",
+  "eavt-path": "firemindlabs/firemind/featurer/src/test/resources/eavt_test.csv",
+  "null-replacement": "NA",
+  "output-path":  "/tmp/featurer-output"
+}
