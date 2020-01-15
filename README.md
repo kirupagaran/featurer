@@ -25,3 +25,8 @@
       --window "1,2," \
       --null-replacement "null" \
       --output-path "/tmp/featurer-output"
+
+
+## Month Difference Calculation examples
+
+2020-04-01 00:00:01 will be included in 1 month difference from the date 2020-05-01 00:00:00 but not 2020-04-01 00:00:00

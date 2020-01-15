@@ -26,6 +26,8 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
 import com.firemindlabs.api.aggregation.Aggregation
 import com.firemindlabs.inputs.{ConfigParser, ConstructInputs}
+import org.joda.time.DateTime
+import org.joda.time.format.DateTimeFormat
 
 import scala.io.Source
 
@@ -37,17 +39,17 @@ import scala.io.Source
   * Sample Execution Command
   *
   * spark-submit \
-      --class com.firemindlabs.operation.FeatureGenerator \
-      --master local \
-      file:///tmp/examples/Featurer-assembly-1.0-SNAPSHOT.jar \
-      --static-features "status:int,balance:int" \
-      --force-categorical "null" \
-      --dynamic-features "sum,min,max,stddev" \
-      --labels-path "/tmp/examples/label_test.csv" \
-      --eavt-path "/tmp/examples/eavt_test.csv" \
-      --window "1,2," \
-      --null-replacement "null" \
-      --output-path "/tmp/featurer-output"
+  * --class com.firemindlabs.operation.FeatureGenerator \
+  * --master local \
+  * file:///tmp/examples/Featurer-assembly-1.0-SNAPSHOT.jar \
+  * --static-features "status:int,balance:int" \
+  * --force-categorical "null" \
+  * --dynamic-features "sum,min,max,stddev" \
+  * --labels-path "/tmp/examples/label_test.csv" \
+  * --eavt-path "/tmp/examples/eavt_test.csv" \
+  * --window "1,2," \
+  * --null-replacement "null" \
+  * --output-path "/tmp/featurer-output"
   */
 object FeatureGenerator {
 
@@ -100,6 +102,7 @@ object FeatureGenerator {
     val processedData = preprocess(spark, eavtDf, labelsDf)
 
     val outputDf = generate(spark, processedData(0), processedData(1), staticFeatures, input.dynamicFeatures.split(","), timeWindow, timeWindow.length - 1)
+      .drop("time", "_c0", "_c1")
     println("OUTPUT SAMPLE")
     println("+++++++++++++++")
     outputDf.show()
@@ -124,7 +127,7 @@ object FeatureGenerator {
     import spark.implicits._
 
     //Data (convert date and time to timestamp)
-    val data = dataDf.withColumn("_c3", unix_timestamp($"_c3", "yyyy-MM-dd"))
+    val data = dataDf.withColumn("_c3", unix_timestamp($"_c3", "yyyy-MM-dd HH:mm:ss"))
     val factsSchema = new StructType()
       .add("entity", "String")
       .add("attribute", "String")
@@ -136,11 +139,11 @@ object FeatureGenerator {
     println("\nSample EAVT with timestamp in seconds...")
     println("............................................\n")
     dataWithTimestamp.show()
-    //val dataWithTimestamp: DataFrame = df.withColumn("datetime", ($"time".cast("timestamp"))).drop($"time")
-    //Labels (convert date and time to timestamp)
-    val getTime = udf { x: String => x.split(":")(1) }
-    val getEntity = udf { x: String => x.split(":")(0) }
-    val labels = labelsDf.withColumn("rawtime", getTime($"_c0")).withColumn("entity", getEntity($"_c0")).withColumn("time", unix_timestamp($"rawtime", "yyyy-MM-dd")).drop("rawtime")
+
+    val labels = labelsDf
+      .withColumn("rawtime", $"_c1")
+      .withColumn("entity", $"_c0")
+      .withColumn("time", unix_timestamp($"rawtime", "yyyy-MM-dd HH:mm:ss"))
 
     List(labels, dataWithTimestamp)
   }
@@ -201,12 +204,26 @@ object FeatureGenerator {
     val statFeature: Array[String] = staticFeatures.keys.toArray
     val month: Int = months(x)
 
-    val joinDf: DataFrame = labelsDf.join(
-      df2, ((df2("time") > (labelsDf("time") - (month * 30 * 86400)))
-        && (df2("time") < labelsDf("time")))
+    val getSubtractedTime = udf {
+      x: String => {
+        (DateTime.parse(x, DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")).minusMonths(month))
+          .toString()
+          .replace("T", " ")
+          .split("\\.")(0)
+      }
+    }
+
+    val labDf = labelsDf
+      .withColumn("subtracted", getSubtractedTime($"rawtime").cast("string"))
+      .withColumn("subtracted_time", unix_timestamp($"subtracted", "yyyy-MM-dd HH:mm:ss"))
+      .drop("subtracted")
+
+    val joinDf: DataFrame = labDf.join(
+      df2, ((df2("time") > (labDf("subtracted_time")))
+        && (df2("time") < labDf("time")))
         && (df2("attribute") === statFeature(0))
-        && (labelsDf("entity") === df2("entity")), "left"
-    )
+        && (labDf("entity") === df2("entity")), "left"
+    ).drop("subtracted_time")
 
     val dd: DataFrame = aggObj.aggregated_columns(spark, labelsDf, joinDf, staticFeatures, featureCnt, dynamicFeatures, month)
     tempDf.join(dd, Seq("time", "entity"), "inner")
