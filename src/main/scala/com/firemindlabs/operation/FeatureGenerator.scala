@@ -221,7 +221,7 @@ object FeatureGenerator {
     val joinDf: DataFrame = labDf.join(
       df2, ((df2("time") > (labDf("subtracted_time")))
         && (df2("time") < labDf("time")))
-        && (df2("attribute") === statFeature(0))
+        && (df2("attribute") === statFeature(featureCnt))
         && (labDf("entity") === df2("entity")), "left"
     ).drop("subtracted_time")
 
