@@ -30,3 +30,5 @@
 ## Month Difference Calculation examples
 
 For the reference date 2020-05-01 00:00:00, 2020-04-01 00:00:01 will be included in 1 month window but not 2020-04-01 00:00:00 
+
+## More examples to be added soon.
